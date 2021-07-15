@@ -4,8 +4,23 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>AC Servicing</title>
-	<link rel="stylesheet" type="text/css" href="acservicingcss.css">
-</head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Courgette&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Della+Respira&family=Eczar:wght@400;500;600&family=Lobster&family=Merienda&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;1,400&family=Niconne&family=Pacifico&family=Ubuntu:wght@300&family=Uchen&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="acservicing_review_css.css">
+	<script src="https://kit.fontawesome.com/0871cdca69.js" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 <body>
 
 	<div id="header">
@@ -29,16 +44,154 @@
 		</ul>
 	</div>
 
+
+
+<!-- Write everything in this box -->
 	<div class="main_container">
-		<p>This is Review page</p>
+
+		
+<ul id="list">
+			
+		</ul>
+
+
+
+
+<!-- firebase connection -->
+
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script> 
+
+		<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyBg9KGbdOtnlQzfg44Hdok3oQEkxY2Ve_o",
+    authDomain: "online-service-marketplace.firebaseapp.com",
+    databaseURL: "https://online-service-marketplace-default-rtdb.firebaseio.com",
+    projectId: "online-service-marketplace",
+    storageBucket: "online-service-marketplace.appspot.com",
+    messagingSenderId: "1096386179814",
+    appId: "1:1096386179814:web:fdc2df99098b00eae28127",
+    measurementId: "G-CKLPS95G8H"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  var stdNo = 0;
+  function addItemToList(name, rollno){
+  	var ul=document.getElementById('list');
+  	var header = document.createElement('h2');
+
+  	var header = document.createElement('li');
+  	var header = document.createElement('li');
+
+  	header.innerHTML = 'Student no: '+(++stdNo);
+  	_name.innerHTML='Name of the student'+name;
+  	_rollno.innerHTML='Roll of the student'+rollno;
+
+  	ul.appendChild(header);
+  	ul.appendChild(_name);
+  	ul.appendChild(_rollno);
+  }
+
+
+function FetchAllData(){
+	firebase.database().ref('student').once('value',function(snapshot){
+		snapshot.forEach(
+			function(ChildSnapshot){
+				let name = ChildSnapshot.val().Name;
+				let roll = ChildSnapshot.val().Roll;
+				addItemToList(name, roll);
+			}
+			);
+	});
+}
+
+window.onload(FetchAllData());
+
+</script>
+
+
+<!-- firebase connection end -->
+
+
+
+		</div>
+
+
+		<!-- box completed -->
 		
 	</div>
 
+	<footer>
+		<div class="footer-content">
+			<div class="left box">
+				<h2>About US</h2>
+				<div class="content">
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+					<div class="social">
+						<a href="https://www.facebook.com/"><span class="fab fa-facebook-f"></span></a>
+						<a href="https://www.twitter.com/"><span class="fab fa-twitter"></span></a>
+						<a href="https://www.instagram.com/"><span class="fab fa-instagram"></span></a>
+						<a href="https://www.youtube.com/"><span class="fab fa-youtube"></span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="center box">
+				<h2>Address</h2>
+				<div class="content">
+					<div class="place">
+						<span class="fas fa-map-marker-alt"></span>
+						<span class="text">Dhaka, Bangladesh</span>
+					</div>
+
+					<div class="phone">
+						<span class="fas fa-phone-alt"></span>
+						<span class="text">+880 1711 222 111</span>
+					</div>
+
+					<div class="email">
+						<span class="fas fa-envelope"></span>
+						<span class="text">query@service.com</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="right box">
+				<h2>Contact US</h2>
+				<div class="content">
+					<form action="#">
+						<div class="email">
+							<div class="text">Email *</div>
+							<input type="email" required="">
+						</div>
+						<div class="msg">
+							<div class="text">Message *</div>
+							<textarea rows="4" cols="35" required=""></textarea>
+						</div>
+						<div class="btn">
+							<button type="submit">SUBMIT</button>
+							
+						</div>
+						
+					</form>
+					
+				</div>
+				
+			</div>
+		</div>
+	</footer>
 
 
-	<div id="footer">
-		<center>Footer</center>
+
+
+	<div id="copyright">
+		<center>Copyright © 2021 Service Platform Limited | All Rights Reserved</center>
 	</div>
 
 </body>
+</head>
 </html>
