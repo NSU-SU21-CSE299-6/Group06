@@ -121,11 +121,12 @@
 .main_container h1{
 	margin: 0;
 	padding: 0;
-	font-family: cursive;
+	font-family: 'Della Respira', serif;
 }
 
 .main_container h3{
-	font-family: cursive;
+	font-family: 'Della Respira', serif;
+	font-weight: bolder;
 }
 
 #trusted{
@@ -138,17 +139,20 @@
 
 .main_container p{
 	padding-left: 1.5%;
-	font-family: cursive;
+	font-weight: bold;
+	font-family: 'Chakra Petch', sans-serif;
 }
 
 .main_container p1{
-	font-family: cursive;
-	font-weight: bold;
+	font-family: 'Neuton', serif;
+	font-size: 20px;
+	font-weight: 700;
 }
 
 .main_container p2{
-	font-family: cursive;
+	font-family: 'Chakra Petch', sans-serif;
 	text-align: justify;
+	font-weight: bold;
 }
 
 
