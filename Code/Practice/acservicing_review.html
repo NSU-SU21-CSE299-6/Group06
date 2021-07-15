@@ -15,7 +15,7 @@
 
 
 
-
+</head>
 
 
 
@@ -46,24 +46,40 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Write everything in this box -->
 	<div class="main_container">
 
-		
-<ul id="list">
+	<table>
+		<thead>
+			<th>Gender</th>
+			<th>Name</th>
+			<th>Roll no</th>
+		</thead>
+		<tbody id="tbody1">
 			
-		</ul>
-
-
-
-
-<!-- firebase connection -->
+		</tbody>
+	</table>
 
 <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script> 
 
-		<script>
+
+
+	<script id="MainScript">
   var firebaseConfig = {
     apiKey: "AIzaSyBg9KGbdOtnlQzfg44Hdok3oQEkxY2Ve_o",
     authDomain: "online-service-marketplace.firebaseapp.com",
@@ -78,51 +94,75 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
-  var stdNo = 0;
-  function addItemToList(name, rollno){
-  	var ul=document.getElementById('list');
-  	var header = document.createElement('h2');
-
-  	var header = document.createElement('li');
-  	var header = document.createElement('li');
-
-  	header.innerHTML = 'Student no: '+(++stdNo);
-  	_name.innerHTML='Name of the student'+name;
-  	_rollno.innerHTML='Roll of the student'+rollno;
-
-  	ul.appendChild(header);
-  	ul.appendChild(_name);
-  	ul.appendChild(_rollno);
-  }
 
 
-function FetchAllData(){
-	firebase.database().ref('student').once('value',function(snapshot){
-		snapshot.forEach(
-			function(ChildSnapshot){
-				let name = ChildSnapshot.val().Name;
-				let roll = ChildSnapshot.val().Roll;
-				addItemToList(name, roll);
-			}
-			);
-	});
+
+function SelectAllData(){
+	firebase.database().ref('student').once('value',
+		function(AllRecords){
+			AllRecords.forEach(
+				function(CurrentRecord){
+					var gender = CurrentRecord.val().Gender;
+					var name = CurrentRecord.val().Name;
+					var roll = CurrentRecord.val().Roll;
+					AddItemsToTable(gender, name, roll);
+				}
+				);
+		});
 }
 
-window.onload(FetchAllData());
+window.onload = SelectAllData;
+
+var stdNo = 0;
+function AddItemsToTable(gender, name, roll){
+	var tbody = document.getElementByID('tbody1');
+	var trow = document.createElement('tr');
+	var td1 = document.createElement('td ');
+	var td2 = document.createElement('td ');
+	var td3 = document.createElement('td ');
+	var td4 = document.createElement('td ');
+
+	td1.innerHTML= ++stdNo;
+	td2.innerHTML= gender;
+	td3.innerHTML= name;
+	td4.innerHTML= roll;
+	trow.appendChild(td1); trow.appendChild(td2); trow.appendChild(td3); trow.appendChild(td4);
+	tbody.appendChild(trow);
+}
 
 </script>
 
 
-<!-- firebase connection end -->
 
 
 
-		</div>
 
-
-		<!-- box completed -->
-		
 	</div>
+		<!-- box completed -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	<footer>
 		<div class="footer-content">
@@ -193,5 +233,5 @@ window.onload(FetchAllData());
 	</div>
 
 </body>
-</head>
+
 </html>
