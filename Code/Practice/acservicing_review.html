@@ -62,8 +62,9 @@
 <!-- Write everything in this box -->
 	<div class="main_container">
 
-	<table>
+		<table>
 		<thead>
+			<th>Serial no</th>
 			<th>Gender</th>
 			<th>Name</th>
 			<th>Roll no</th>
@@ -73,13 +74,15 @@
 		</tbody>
 	</table>
 
+
+
 <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
 
-
-
-	<script id="MainScript">
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
     apiKey: "AIzaSyBg9KGbdOtnlQzfg44Hdok3oQEkxY2Ve_o",
     authDomain: "online-service-marketplace.firebaseapp.com",
@@ -97,6 +100,7 @@
 
 
 
+
 function SelectAllData(){
 	firebase.database().ref('student').once('value',
 		function(AllRecords){
@@ -105,7 +109,7 @@ function SelectAllData(){
 					var gender = CurrentRecord.val().Gender;
 					var name = CurrentRecord.val().Name;
 					var roll = CurrentRecord.val().Roll;
-					AddItemsToTable(gender, name, roll);
+					AddItemsToTable(gender,name,roll);
 				}
 				);
 		});
@@ -114,24 +118,26 @@ function SelectAllData(){
 window.onload = SelectAllData;
 
 var stdNo = 0;
-function AddItemsToTable(gender, name, roll){
-	var tbody = document.getElementByID('tbody1');
+function AddItemsToTable(gender,name,roll){
+	var tbody = document.getElementById('tbody1');
 	var trow = document.createElement('tr');
-	var td1 = document.createElement('td ');
-	var td2 = document.createElement('td ');
-	var td3 = document.createElement('td ');
-	var td4 = document.createElement('td ');
+	var td1 = document.createElement('td');
+	var td2 = document.createElement('td');
+	var td3 = document.createElement('td');
+	var td4 = document.createElement('td');
 
 	td1.innerHTML= ++stdNo;
 	td2.innerHTML= gender;
 	td3.innerHTML= name;
 	td4.innerHTML= roll;
-	trow.appendChild(td1); trow.appendChild(td2); trow.appendChild(td3); trow.appendChild(td4);
+	trow.appendChild(td1); 
+	trow.appendChild(td2); 
+	trow.appendChild(td3); 
+	trow.appendChild(td4);
 	tbody.appendChild(trow);
 }
 
 </script>
-
 
 
 
