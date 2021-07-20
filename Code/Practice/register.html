@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login and Registration page </title>
+	<link rel="stylesheet" type="text/css" href="register.css">
+</head>
+<body>
+	<div id="content_container">
+		<div id= "form_container">
+		<div id = "form_header_container">
+				<h2 id = "form_header">  REGISTRATION PAGE </h2>
+			</div>
+
+
+			<div id="form_content_container">
+		<input type="text" id="full_name" placeholder="Enter full name">
+		<input type="email" id="email" placeholder="Enter Email">
+		<input type="password" id="password" placeholder="Enter password">
+		<input type="text" id ="phoneno" placeholder="Enter you phone number">
+		<input type="text" id ="city" placeholder="Enter your city. Example: Dhaka">
+		<div id="button_container">
+			<button onclick="register()">Register</button>
+		</div>
+		<p>Alread have an account?</p>
+	</div>
+		</div>
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+<script src="registerjsfile.js"></script>
+</body>
+</html>
