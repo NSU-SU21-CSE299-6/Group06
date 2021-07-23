@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login  </title>
+	<link rel="stylesheet" type="text/css" href="loginPage.css">
+</head>
+<body>
+	<div id="content_container">
+		<div id= "form_container">
+		<div id = "form_header_container">
+				<h2 id = "form_header">  LOGIN  PAGE </h2>
+			</div>
+
+
+			<div id="form_content_container">
+		<input type="email" id="email" placeholder="Enter Email">
+		<input type="password" id="password" placeholder="Enter password">
+		
+		<div id="button_container">
+			<button onclick="login()">Login</button>
+		</div>
+		
+	</div>
+		</div>
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+<script src="loginPage.js"></script>
+</body>
+</html>
