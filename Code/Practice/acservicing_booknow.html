@@ -51,12 +51,12 @@
 				<div class="product">
 					<img src="acbasicservice.jpg">
 					<div class="product-info">
-						<h3 class="product-name">AC Basic Service</h3>
+						<h3 class="product-name" name="acbasic" id="acbasic">AC Basic Service</h3>
 						<h2 class="product-price">1000</h2>
-						<p class="product-quantity">Qnt: <input value="1" name="">
+						<p class="product-quantity">Qnt: <input value="1" name="qnt" id="qnt">
 						<p class="product-remove">
 							<i class="fa fa-trash" aria-hidden="true"></i>
-							<span class="remove">Remove</span>
+							<span class="remove">ADD</span>
 						</p>
 					</div>
 				</div>
@@ -69,13 +69,40 @@
 						<p class="product-quantity">Qnt: <input value="1" name="">
 						<p class="product-remove">
 							<i class="fa fa-trash" aria-hidden="true"></i>
-							<span class="remove">Remove</span>
+							<span class="remove">ADD</span>
 						</p>
 					</div>
 				</div>
 
 			</div>
+
+
+
+
+
 			<div class="cart-total">
+				<td>
+					<table class="list" id="alldatas"> 
+						<thead>
+							<tr>
+								<th>Items</th>
+								<th>Quentity</th>
+								<th>Price</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+						</tbody>
+					</table>
+				</td>
+
+
+
+
+
+
+
+
 				<p>
 					<span>Total price</span>
 					<span>1,000</span>
@@ -190,27 +217,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<div id="copyright">
 		<center>Copyright © 2021 Service Platform Limited | All Rights Reserved</center>
 	</div>
-
+	<script src="acservicing_booknow_js.js"></script>
 </body>
 </html>
