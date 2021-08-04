@@ -220,7 +220,7 @@
 }
 
 .cart-total{
-	flex: 0.25;
+	flex: 0.35;
 	margin-left: 20px;
 	padding: 20px;
 	height: 240px;
@@ -247,6 +247,23 @@
 
 .cart-total a:hover{
 	background-color: darkred;
+}
+
+table{
+	border-collapse: collapse;
+}
+table.list{
+	width: 100%;
+}
+
+td, th{
+	border: 1px solid black;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even),table.list thead>tr{
+	background-color: #dddddd;
 }
 @media screen and (max-width: 500px){
 	.remove{
