@@ -46,73 +46,46 @@
 	<div class="main_container">
 		<div class="container">
 			<div class="cart">
-			<div class="products">
+				<table>
+					<tr>
+						<td>
+							<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
 
-				<div class="product">
-					<img src="acbasicservice.jpg">
-					<div class="product-info">
-						<h3 class="product-name" name="acbasic" id="acbasic">AC Basic Service</h3>
-						<h2 class="product-price">1000</h2>
-						<p class="product-quantity">Qnt: <input value="1" name="qnt" id="qnt">
-						<p class="product-remove">
-							<i class="fa fa-trash" aria-hidden="true"></i>
-							<span class="remove">ADD</span>
-						</p>
-					</div>
-				</div>
+								 <div>
+                                   <label>Salary</label>
+                                   <input type="text" name="salary" id="salary">
+                                 </div>
 
-				<div class="product">
-					<img src="acbasicservice.jpg">
-					<div class="product-info">
-						<h3 class="product-name">AC Premium</h3>
-						<h2 class="product-price">4000</h2>
-						<p class="product-quantity">Qnt: <input value="1" name="">
-						<p class="product-remove">
-							<i class="fa fa-trash" aria-hidden="true"></i>
-							<span class="remove">ADD</span>
-						</p>
-					</div>
-				</div>
+                                 <div>
+                                   <label>City</label>
+                                   <input type="text" name="city" id="city">
+                                 </div>
 
-			</div>
+                                 <div  class="form-action-buttons">
+                                   <input type="submit" value="Submit">
+                                 </div>
+							</form>
+						</td>
+						<td>
+							 <table class="list" id="employeeList">
+                               <thead>
+                                  <tr>
+                                   <th>Salary</th>
+                                   <th>City</th>
+                                   <th></th>
+                                  </tr>
+                              </thead>
+                             <tbody>
 
-
-
-
-
-			<div class="cart-total">
-				<td>
-					<table class="list" id="alldatas"> 
-						<thead>
-							<tr>
-								<th>Items</th>
-								<th>Quentity</th>
-								<th>Price</th>
-							</tr>
-						</thead>
-						<tbody>
-							
-						</tbody>
-					</table>
-				</td>
+                             </tbody>
+                          </table>
+						</td>
+					</tr>
+				</table>
 
 
 
 
-
-
-
-
-				<p>
-					<span>Total price</span>
-					<span>1,000</span>
-				</p>
-				<p>
-					<span>Number of items</span>
-					<span>2</span>
-				</p>
-				<a href="#">Proceed to Checkout</a>
-			</div>
 			
 		</div>
 		</div>
