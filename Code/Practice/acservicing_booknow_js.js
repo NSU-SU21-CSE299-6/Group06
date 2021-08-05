@@ -6,17 +6,26 @@ function onFormSubmit(){
 
 function readFormData(){
 	var formData = {};
-	formData["acbasic"] = document.getElementById("acbasic").value;
-	formData["qnt"] = document.getElementById("qnt").value;
+	formData["salary"] = document.getElementById("salary").value;
+	formData["city"] = document.getElementById("city").value;
 	return formData;
 }
 
-function insertNewRecord(data){
-	var table = document.getElementById("alldatas").getElementsByTagName('tbody')[0];
-	var newRow = table.insertRow(table.length);
-	cell1 = newRow.insertCell(0);
-	cell1.innerHTML = data.acbasic;
-	cell2 = newRow.insertCell(1);
-	cell2.innerHTML = data.qnt;
-	cell3.innerHTML = '<a>Delete</a>';
+function insertNewRecord(data) {
+    var table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
+    var newRow = table.insertRow(table.length);
+    cell1 = newRow.insertCell(0);
+    cell1.innerHTML = data.salary;
+    cell2 = newRow.insertCell(1);
+    cell2.innerHTML = data.city;
+    cell3 = newRow.insertCell(2);
+    cell3.innerHTML = `<a onClick="onDelete(this)"><i class="fa fa-remove"></a>`;
+}
+
+function onDelete(td){
+	if (confirm('Are you sure to delete this record ?')) {
+        row = td.parentElement.parentElement;
+        document.getElementById("employeeList").deleteRow(row.rowIndex);
+        resetForm();
+    }
 }
