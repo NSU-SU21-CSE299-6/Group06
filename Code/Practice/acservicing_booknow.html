@@ -47,114 +47,109 @@
 		<div class="container">
 			<div class="cart">
 
-				<table>
-					<tr>
-						<td>
-							<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+							
 
-										<div class="products">
+								<div class="products">
+									<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+				            <div class="product">
+					              <img src="acbasicservice.jpg">
+				            	<div class="product-info">
+						            <input class="product-name" name="acbasic" id="acbasic" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" value="AC Basic service" readonly>
+						            <div class="productprice">
+						              <h2 class="product-price" style="display: inline;">৳</h2>
+					             	  <h2 class="product-price" style="display: inline;">1000</h2>
+						            </div>
+						            <p class="product-quantity">Qnt: <input value="1" name="qnt" id="qnt">
+                           <div  class="form-action-buttons">
+                           <input class="product-remove" type="submit" value="ADD">
+                           </div>
+				        	    </div>
+			     	        </div>
+			     	      </form>
 
-				<div class="product">
-					<img src="acbasicservice.jpg">
-					<div class="product-info">
-						<h3 class="product-name" name="salary" id="salary">AC Basic Service</h3>
-						<h2 class="product-price">1000</h2>
-						<p class="product-quantity">Qnt: <input value="1" name="city" id="city" readonly>
+			     	      <form onsubmit="event.preventDefault();onFormSubmit1();" autocomplete="off">
+			     	        <div class="product">
+					              <img src="acbasicservice.jpg">
+				            	<div class="product-info">
+						            <input class="product-name" name="acmaster" id="acmaster" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" value="AC Master service" readonly>
+					             	<div class="productprice">
+						              <h2 class="product-price" style="display: inline;">৳</h2>
+					             	  <h2 class="product-price" style="display: inline;">2000</h2>
+						            </div>
+						            <p class="product-quantity">Qnt: <input value="1" name="qnt1" id="qnt1">
+                           <div  class="form-action-buttons">
+                           <input class="product-remove" type="submit" value="ADD">
+                           </div>
+				        	    </div>
+			     	        </div>
+			     	      </form>
+
+			     	      <form onsubmit="event.preventDefault();onFormSubmit2();" autocomplete="off">
+			     	        <div class="product">
+					              <img src="acbasicservice.jpg">
+				            	<div class="product-info">
+						            <input class="product-name" name="acwater" id="acwater" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" value="AC Water Drop Solution" readonly>
+					             	<div class="productprice">
+						              <h2 class="product-price" style="display: inline;">৳</h2>
+					             	  <h2 class="product-price" style="display: inline;">1100</h2>
+						            </div>
+						            <p class="product-quantity">Qnt: <input value="1" name="qnt2" id="qnt2">
+                           <div  class="form-action-buttons">
+                           <input class="product-remove" type="submit" value="ADD">
+                           </div>
+				        	    </div>
+			     	        </div>
+			     	      </form>
+
+			     	      <form onsubmit="event.preventDefault();onFormSubmit3();" autocomplete="off">
+			     	        <div class="product">
+					              <img src="acbasicservice.jpg">
+				            	<div class="product-info">
+						            <input class="product-name" name="acjet" id="acjet" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" value="AC Jet Wash" readonly>
+					             	<div class="productprice">
+						              <h2 class="product-price" style="display: inline;">৳</h2>
+					             	  <h2 class="product-price" style="display: inline;">2100</h2>
+						            </div>
+						            <p class="product-quantity">Qnt: <input value="1" name="qnt3" id="qnt3">
+                           <div  class="form-action-buttons">
+                           <input class="product-remove" type="submit" value="ADD">
+                           </div>
+				        	    </div>
+			     	        </div>
+			     	      </form>
 
 
-							                    <div  class="form-action-buttons">
-                                   <input class="product-remove" type="submit" style="background-color: green;" value="Submit">
-                                 </div>
-
-                                 
 
 
-                                 
+		           </div>
 
-					</div>
-				</div>
-
-		</div>
-							</form>
-						</td>
-						<td>
-							 <table class="list" id="employeeList">
+<!-- Product complete...........................-->
+							<div class="cart-total">
+															 <table class="list" id="employeeList">
                                <thead>
                                   <tr>
-                                   <th>Salary</th>
-                                   <th>City</th>
-                                   <th></th>
+                                   <th>Items</th>
+                                   <th>Quentity</th>
+                                   <th>Total price</th>
+                                   <th>Remove</th>
                                   </tr>
                               </thead>
                              <tbody>
 
                              </tbody>
                           </table>
-						</td>
-					</tr>
-				</table>
 
 
-
-
-
-
-
-
-
-
-
-
-				<table>
-					<tr>
-						<td>
-							<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
-
-								 <div>
-                                   <label>Salary</label>
-                                   <input type="text" name="salary" id="salary">
-                                 </div>
-
-                                 <div>
-                                   <label>City</label>
-                                   <input type="text" name="city" id="city">
-                                 </div>
-
-                                 <div  class="form-action-buttons">
-                                   <input type="submit" value="Submit">
-                                 </div>
-							</form>
-						</td>
-						<td>
-							 <table class="list" id="employeeList">
-                               <thead>
-                                  <tr>
-                                   <th>Salary</th>
-                                   <th>City</th>
-                                   <th></th>
-                                  </tr>
-                              </thead>
-                             <tbody>
-
-                             </tbody>
-                          </table>
-						</td>
-					</tr>
-				</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                          <p>
+					                <span>Total price</span>
+					                <span>1,000</span>
+			                  	</p>
+			                   	<p>
+					                <span>Number of items</span>
+				                 	<span>2</span>
+				                  </p>
+				                 <a href="#">Proceed to Checkout</a>
+							</div>
 
 
 
@@ -177,31 +172,6 @@
 
 		
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
