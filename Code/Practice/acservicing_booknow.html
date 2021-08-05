@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
 	<script src="https://kit.fontawesome.com/0871cdca69.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
 	<div id="header">
@@ -38,11 +39,6 @@
 
 
 
-
-
-
-
-
 	<div class="main_container">
 		<div class="container">
 			<div class="cart">
@@ -55,11 +51,15 @@
 					              <img src="acbasicservice.jpg">
 				            	<div class="product-info">
 						            <input class="product-name" name="acbasic" id="acbasic" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" value="AC Basic service" readonly>
+
 						            <div class="productprice">
 						              <h2 class="product-price" style="display: inline;">৳</h2>
 					             	  <h2 class="product-price" style="display: inline;">1000</h2>
+					             	  <input  type="hidden" id="acbasictotal" value="1000" readonly>
 						            </div>
-						            <p class="product-quantity">Qnt: <input value="1" name="qnt" id="qnt">
+
+						            
+						            <p class="product-quantity">Qnt: <input value="1" name="qnt" id="qnt" onkeyup="mult(this.value);">
                            <div  class="form-action-buttons">
                            <input class="product-remove" type="submit" value="ADD">
                            </div>
@@ -75,8 +75,9 @@
 					             	<div class="productprice">
 						              <h2 class="product-price" style="display: inline;">৳</h2>
 					             	  <h2 class="product-price" style="display: inline;">2000</h2>
+					             	  <input  type="hidden" id="acmastertotal" value="2000" readonly>
 						            </div>
-						            <p class="product-quantity">Qnt: <input value="1" name="qnt1" id="qnt1">
+						            <p class="product-quantity">Qnt: <input value="1" name="qnt1" id="qnt1" onkeyup="mult1(this.value);">
                            <div  class="form-action-buttons">
                            <input class="product-remove" type="submit" value="ADD">
                            </div>
@@ -92,8 +93,9 @@
 					             	<div class="productprice">
 						              <h2 class="product-price" style="display: inline;">৳</h2>
 					             	  <h2 class="product-price" style="display: inline;">1100</h2>
+					             	  <input  type="hidden" id="acwatertotal" value="1100" readonly>
 						            </div>
-						            <p class="product-quantity">Qnt: <input value="1" name="qnt2" id="qnt2">
+						            <p class="product-quantity">Qnt: <input value="1" name="qnt2" id="qnt2" onkeyup="mult2(this.value);">
                            <div  class="form-action-buttons">
                            <input class="product-remove" type="submit" value="ADD">
                            </div>
@@ -109,8 +111,9 @@
 					             	<div class="productprice">
 						              <h2 class="product-price" style="display: inline;">৳</h2>
 					             	  <h2 class="product-price" style="display: inline;">2100</h2>
+					             	  <input  type="hidden" id="acjettotal" value="2100" readonly>
 						            </div>
-						            <p class="product-quantity">Qnt: <input value="1" name="qnt3" id="qnt3">
+						            <p class="product-quantity">Qnt: <input value="1" name="qnt3" id="qnt3" onkeyup="mult3(this.value);">
                            <div  class="form-action-buttons">
                            <input class="product-remove" type="submit" value="ADD">
                            </div>
