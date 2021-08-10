@@ -55,11 +55,11 @@
 						            <div class="productprice">
 						              <h2 class="product-price" style="display: inline;">৳</h2>
 					             	  <h2 class="product-price" style="display: inline;">1000</h2>
-					             	  <input  type="" id="acbasictotal" value="1000" readonly>
+					             	  <input  type="" id="acbasictotal" value="0" readonly>
 						            </div>
 
 						            
-						            <p class="product-quantity">Qnt: <input value="1" name="qnt" id="qnt" onkeyup="mult(this.value);">
+						            <p class="product-quantity">Qnt: <input value="0" name="qnt" id="qnt" onkeyup="mult(this.value);">
                            <div  class="form-action-buttons">
                            <input class="product-remove" type="submit" value="ADD">
                            </div>
@@ -75,9 +75,9 @@
 					             	<div class="productprice">
 						              <h2 class="product-price" style="display: inline;">৳</h2>
 					             	  <h2 class="product-price" style="display: inline;">2000</h2>
-					             	  <input  type="" id="acmastertotal" value="2000" readonly>
+					             	  <input  type="" id="acmastertotal" value="0" readonly>
 						            </div>
-						            <p class="product-quantity">Qnt: <input value="1" name="qnt1" id="qnt1" onkeyup="mult1(this.value);">
+						            <p class="product-quantity">Qnt: <input value="0" name="qnt1" id="qnt1" onkeyup="mult1(this.value);">
                            <div  class="form-action-buttons">
                            <input class="product-remove" type="submit" value="ADD">
                            </div>
@@ -93,9 +93,9 @@
 					             	<div class="productprice">
 						              <h2 class="product-price" style="display: inline;">৳</h2>
 					             	  <h2 class="product-price" style="display: inline;">1100</h2>
-					             	  <input  type="" id="acwatertotal" value="1100" readonly>
+					             	  <input  type="" id="acwatertotal" value="0" readonly>
 						            </div>
-						            <p class="product-quantity">Qnt: <input value="1" name="qnt2" id="qnt2" onkeyup="mult2(this.value);">
+						            <p class="product-quantity">Qnt: <input value="0" name="qnt2" id="qnt2" onkeyup="mult2(this.value);">
                            <div  class="form-action-buttons">
                            <input class="product-remove" type="submit" value="ADD">
                            </div>
@@ -111,9 +111,9 @@
 					             	<div class="productprice">
 						              <h2 class="product-price" style="display: inline;">৳</h2>
 					             	  <h2 class="product-price" style="display: inline;">2100</h2>
-					             	  <input  type="" id="acjettotal" value="2100" readonly>
+					             	  <input  type="" id="acjettotal" value="0" readonly>
 						            </div>
-						            <p class="product-quantity">Qnt: <input value="1" name="qnt3" id="qnt3" onkeyup="mult3(this.value);">
+						            <p class="product-quantity">Qnt: <input value="0" name="qnt3" id="qnt3" onkeyup="mult3(this.value);">
                            <div  class="form-action-buttons">
                            <input class="product-remove" type="submit" value="ADD">
                            </div>
@@ -145,10 +145,8 @@
 
                           <p>
 					                <span>Total price</span>
-					                <span>1,000</span>
-					                <input  type="" id="pricetotal" value="0" readonly>
-					                <h1 id="answer"></h1>
-					                <button >Calculate</button>
+					                
+					                <input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none;"  type="" id="pricetotal" value="0" readonly>
 			                  	</p>
 			                   	<p>
 					                <span>Number of items</span>
@@ -251,20 +249,5 @@
 		<center>Copyright © 2021 Service Platform Limited | All Rights Reserved</center>
 	</div>
 	<script src="acservicing_booknow_js.js"></script>
-
-	<script>
-		function calculate()
-		{
-			var f1 = document.getElementById("acbasictotal").value;
-			var f2 = document.getElementById("acmastertotal").value;
-
-			var result = parseFloat(f1)+parseFloat(f2);
-
-			if(!isNaN(result))
-			{
-				document.getElementById("answer").innerHTML="The answer is "+result;
-			}
-		}
-	</script>
 </body>
 </html>
