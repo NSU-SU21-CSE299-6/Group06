@@ -125,3 +125,18 @@ function mult3(value){
     document.getElementById('acjettotal').value = a;
 }
 
+function calculate(){
+    var f1 = document.getElementById("acbasictotal").value;
+    var f2 = document.getElementById("acmastertotal").value;
+    var f3 = document.getElementById("acwatertotal").value;
+    var f4 = document.getElementById("acjettotal").value;
+
+    var result = parseFloat(f1)+parseFloat(f2)+parseFloat(f3)+parseFloat(f4);
+
+    if(!isNaN(result))
+        {
+            document.getElementById("pricetotal").value=result;
+        }
+}
+
+
