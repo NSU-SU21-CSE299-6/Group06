@@ -124,3 +124,4 @@ function mult3(value){
     a=2100 * value;
     document.getElementById('acjettotal').value = a;
 }
+
