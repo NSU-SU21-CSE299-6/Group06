@@ -124,3 +124,28 @@ function mult3(value){
     a=2100 * value;
     document.getElementById('acjettotal').value = a;
 }
+
+function calculate(){
+    var f1 = document.getElementById("acbasictotal").value;
+    var f2 = document.getElementById("acmastertotal").value;
+    var f3 = document.getElementById("acwatertotal").value;
+    var f4 = document.getElementById("acjettotal").value;
+
+    var i1 = document.getElementById("qnt").value;
+    var i2 = document.getElementById("qnt1").value;
+    var i3 = document.getElementById("qnt2").value;
+    var i4 = document.getElementById("qnt3").value;
+
+    var result = parseFloat(f1)+parseFloat(f2)+parseFloat(f3)+parseFloat(f4);
+    var result1 = parseFloat(i1)+parseFloat(i2)+parseFloat(i3)+parseFloat(i4);
+
+    if(!isNaN(result))
+        {
+            document.getElementById("pricetotal").value=result;
+            document.getElementById("itemstotal").value=result1;
+        }
+}
+
+
+
+
