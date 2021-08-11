@@ -61,7 +61,7 @@
 						            
 						            <p class="product-quantity">Qnt: <input value="0" name="qnt" id="qnt" onkeyup="mult(this.value);">
                            <div  class="form-action-buttons">
-                           <input class="product-remove" type="submit" value="ADD">
+                           <button class="product-remove" id="acbasictotalbtn" type="submit" disabled>ADD</button>
                            </div>
 				        	    </div>
 			     	        </div>
@@ -79,7 +79,7 @@
 						            </div>
 						            <p class="product-quantity">Qnt: <input value="0" name="qnt1" id="qnt1" onkeyup="mult1(this.value);">
                            <div  class="form-action-buttons">
-                           <input class="product-remove" type="submit" value="ADD">
+                           <button class="product-remove" id="acmastertotalbtn" type="submit" disabled>ADD</button>
                            </div>
 				        	    </div>
 			     	        </div>
@@ -97,7 +97,7 @@
 						            </div>
 						            <p class="product-quantity">Qnt: <input value="0" name="qnt2" id="qnt2" onkeyup="mult2(this.value);">
                            <div  class="form-action-buttons">
-                           <input class="product-remove" type="submit" value="ADD">
+                           <button class="product-remove" id="acwatertotalbtn" type="submit" disabled>ADD</button>
                            </div>
 				        	    </div>
 			     	        </div>
@@ -111,11 +111,11 @@
 					             	<div class="productprice">
 						              <h2 class="product-price" style="display: inline;">৳</h2>
 					             	  <h2 class="product-price" style="display: inline;">2100</h2>
-					             	  <input  type="hidden" id="acjettotal" value="0" readonly>
+					             	  <input  type="hidden" id="acjettotal" value="2100" readonly>
 						            </div>
 						            <p class="product-quantity">Qnt: <input value="0" name="qnt3" id="qnt3" onkeyup="mult3(this.value);">
                            <div  class="form-action-buttons">
-                           <input class="product-remove" type="submit" value="ADD">
+                           <button class="product-remove" id="acjettotalbtn" type="submit" disabled>ADD</button>
                            </div>
 				        	    </div>
 			     	        </div>
@@ -152,15 +152,9 @@
 					               <span>Number of items</span>
 				                 	<input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none;"  type="" id="itemstotal" value="0" readonly>
 				                  </p>
-				                 <a onclick="calculate()">Proceed to Checkout</a>
+				                  <button id="checkoutbtn" onclick="calculate()">PROCEED TO CHECKOUT</button>
+				                 <a id="calculate" style="visibility: hidden;" >Proceed to Checkout</a>
 							</div>
-
-
-
-
-
-
-
 
 
 
@@ -249,5 +243,66 @@
 		<center>Copyright © 2021 Service Platform Limited | All Rights Reserved</center>
 	</div>
 	<script src="acservicing_booknow_js.js"></script>
+
+
+
+
+	<script>
+		const buttonacbasictotalbtn = document.getElementById("acbasictotalbtn");
+		const buttonacmastertotalbtn = document.getElementById("acmastertotalbtn");
+		const buttonacwatertotalbtn = document.getElementById("acwatertotalbtn");
+		const buttonacjettotal = document.getElementById("acjettotalbtn");
+
+
+		const inputqnt = document.getElementById("qnt");
+		const inputqnt1 = document.getElementById("qnt1");
+		const inputqnt2 = document.getElementById("qnt2");
+		const inputqnt3 = document.getElementById("qnt3");
+
+		inputqnt.addEventListener("keyup", (e) => {
+			const value = e.currentTarget.value;
+
+			if(value === ""){
+				buttonacbasictotalbtn.disabled = true;
+			} else {
+				buttonacbasictotalbtn.disabled = false;
+			}
+		});
+
+		inputqnt1.addEventListener("keyup", (e) => {
+			const value = e.currentTarget.value;
+
+			if(value === ""){
+				buttonacmastertotalbtn.disabled = true;
+			} else {
+				buttonacmastertotalbtn.disabled = false;
+			}
+		});
+
+		inputqnt2.addEventListener("keyup", (e) => {
+			const value = e.currentTarget.value;
+
+			if(value === ""){
+				buttonacwatertotalbtn.disabled = true;
+			} else {
+				buttonacwatertotalbtn.disabled = false;
+			}
+		});
+
+		inputqnt3.addEventListener("keyup", (e) => {
+			const value = e.currentTarget.value;
+
+			if(value === ""){
+				buttonacjettotal.disabled = true;
+			} else {
+				buttonacjettotal.disabled = false;
+			}
+		});
+
+
+
+	</script>
+
+
 </body>
 </html>
