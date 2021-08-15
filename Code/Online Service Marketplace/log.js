@@ -38,7 +38,7 @@ function login () {
 
     // Create User data
     var user_data = {
-      last_login : Date.now()
+      //last_login : Date.now()
     }
 
     // Push to Firebase Database
