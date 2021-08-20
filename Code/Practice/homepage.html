@@ -20,6 +20,35 @@
 			<h1> Your Personal Assistant</h1>
 			<p> Get Expert Professional Services. Order any service, anytime.</p>
 		</div>
+
+		<div class="searchBar">
+			<input type="text" name="box" placeholder="Find your service here e.g. AC, Plumbing, Facial …">
+			<i class="fas fa-search"></i>
+        
+		</div>
+
+		 <select id="location" onchange="getSelectValue();">
+            <option value="Mirpur">Mirpur</option>
+            <option value="Badda">Badda</option>
+            <option value="Banani">Banani</option>
+            <option value="Gulshan">Gulshan</option>
+            <option value="Nikunjo">Nikunjo</option>
+            <option value="Uttara">Uttara</option>
+            <option value="Shahbag">Shahbag</option>
+            <option value="Rampura">Rampura</option>
+            <option value="Khilgaon">Khilgaon</option>
+            <option value="Kafrul">Kafrul</option>
+        </select>
+    <script>
+        
+        function getSelectValue()
+        {
+            var selectedValue = document.getElementById("location").value;
+            console.log(selectedValue);
+        }
+        getSelectValue();
+
+    </script>
 		
 	</header>
 
