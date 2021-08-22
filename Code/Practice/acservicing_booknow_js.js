@@ -144,6 +144,25 @@ function calculate(){
             document.getElementById("pricetotal").value=result;
             document.getElementById("itemstotal").value=result1;
         }
+
+
+
+        if (confirm('Are you sure you have added all the items you need?')) {
+        document.getElementById("checkoutbtn").style.visibility = 'hidden';
+        document.getElementById("acbasictotalbtn").style.visibility = 'hidden';
+        document.getElementById("acmastertotalbtn").style.visibility = 'hidden';
+        document.getElementById("acwatertotalbtn").style.visibility = 'hidden';
+        document.getElementById("acjettotalbtn").style.visibility = 'hidden';
+
+
+        document.getElementById("btncheckout").style.visibility = 'visible';
+        document.getElementById("totalpricename").style.visibility = 'visible';
+        document.getElementById("pricetotal").style.visibility = 'visible';
+        document.getElementById("totalitems").style.visibility = 'visible';
+        document.getElementById("itemstotal").style.visibility = 'visible';
+    }
+
+
 }
 
 
