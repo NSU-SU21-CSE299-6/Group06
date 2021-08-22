@@ -154,6 +154,10 @@
 				                  </p>
 				                  <button id="checkoutbtn" onclick="calculate()">CALCULATE TOTAL PRICE</button>
 				                 <a id="btncheckout" style="visibility: hidden ;" >PROCEED TO CHECKOUT</a>
+				                 <div id="trxid">
+				                 	<input  type=""  value="">
+				                 </div>
+				                 
 							</div>
 
 
@@ -301,6 +305,22 @@
 				buttonacjettotal.disabled = false;
 			}
 		});
+
+
+
+
+
+		document.getElementById('trxid').innerHTML = create_random_string(15);
+		
+		function create_random_string(string_length){
+			var random_string = '';
+			var characters='ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz'
+			for(var i, i=0; i<string_length; i++){
+				random_string += characters.charAt(Math.floor(Math.random() * characters.length));
+			}
+			return random_string
+		}
+
 
 
 	</script>
