@@ -144,16 +144,16 @@
 
 
                           <p>
-					                <span>Total price</span>
+					                <span id="totalpricename" style="visibility: hidden ;">Total price</span>
 					                
-					                <input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none;"  type="" id="pricetotal" value="0" readonly>
+					                <input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none; visibility: hidden ;"  type="" id="pricetotal" value="0" readonly>
 			                  	</p>
 			                   	<p>
-					               <span>Number of items</span>
-				                 	<input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none;"  type="" id="itemstotal" value="0" readonly>
+					               <span id="totalitems" style="visibility: hidden ;">Number of items</span>
+				                 	<input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none;  visibility: hidden ;"  type="" id="itemstotal" value="0" readonly>
 				                  </p>
-				                  <button id="checkoutbtn" onclick="calculate()">PROCEED TO CHECKOUT</button>
-				                 <a id="calculate" style="visibility: hidden;" >Check button</a>
+				                  <button id="checkoutbtn" onclick="calculate()">CALCULATE TOTAL PRICE</button>
+				                 <a id="btncheckout" style="visibility: hidden ;" >PROCEED TO CHECKOUT</a>
 							</div>
 
 
