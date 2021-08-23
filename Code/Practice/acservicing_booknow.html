@@ -153,9 +153,10 @@
 				                 	<input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none;  visibility: hidden ;"  type="" id="itemstotal" value="0" readonly>
 				                  </p>
 				                  <button id="checkoutbtn" onclick="calculate()">CALCULATE TOTAL PRICE</button>
-				                 <a id="btncheckout" style="visibility: hidden ;" >PROCEED TO CHECKOUT</a>
+				                  <button id="btncheckout" style="visibility: hidden ;" onclick="paymenttrxid()">PROCEED TO CHECKOUT</button>
+				                
 				                 <div id="trxid">
-				                 	<input  type=""  value="">
+				                 	<input id="trxidinput" type=""  value="">
 				                 </div>
 				                 
 							</div>
@@ -324,6 +325,12 @@
 
 
 	</script>
+
+
+
+	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
 
 
 </body>

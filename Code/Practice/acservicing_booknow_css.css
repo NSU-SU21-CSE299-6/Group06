@@ -240,7 +240,7 @@
 	font-size: 20px;
 }
 
-#checkoutbtn{
+#checkoutbtn, #btncheckout{
 	display: block;
 	text-align: center;
 	height: 40px;
@@ -254,6 +254,11 @@
 #checkoutbtn:hover{
 	background-color: #C82907;
 }
+
+#btncheckout:hover{
+	background-color: #C82907;
+}
+
 
 .cart-total a{
 	display: block;
