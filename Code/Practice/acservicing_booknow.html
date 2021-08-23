@@ -153,9 +153,11 @@
 				                 	<input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none;  visibility: hidden ;"  type="" id="itemstotal" value="0" readonly>
 				                  </p>
 				                  <button id="checkoutbtn" onclick="calculate()">CALCULATE TOTAL PRICE</button>
-				                 <a id="btncheckout" style="visibility: hidden ;" >PROCEED TO CHECKOUT</a>
+				                  <button id="btncheckout" style="visibility: hidden ;" onclick="paymenttrxid()">PROCEED TO CHECKOUT</button>
+				                  <button id="brocode" onclick="brocode()">Try button</button>
+				                
 				                 <div id="trxid">
-				                 	<input  type=""  value="">
+				                 	<input id="trxidinput" type=""  value="">
 				                 </div>
 				                 
 							</div>
@@ -248,6 +250,73 @@
 	</div>
 	<script src="acservicing_booknow_js.js"></script>
 
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+   <script id="MainScript">
+
+//---------------------------------CONFIGURATION----------------------//
+   	  var firebaseConfig = {
+		    apiKey: "AIzaSyBg9KGbdOtnlQzfg44Hdok3oQEkxY2Ve_o",
+		    authDomain: "online-service-marketplace.firebaseapp.com",
+		    databaseURL: "https://online-service-marketplace-default-rtdb.firebaseio.com",
+		    projectId: "online-service-marketplace",
+		    storageBucket: "online-service-marketplace.appspot.com",
+		    messagingSenderId: "1096386179814",
+		    appId: "1:1096386179814:web:fdc2df99098b00eae28127",
+		    measurementId: "G-CKLPS95G8H"
+		  };
+		  firebase.initializeApp(firebaseConfig);
+		  firebase.analytics();
+
+//---------------------------------READY DATA----------------------//
+
+var itemsV, priceV;
+
+function Ready(){
+	itemsV = document.getElementById('itemstotal').value;
+	priceV = document.getElementById('pricetotal').value;
+}
+
+document.getElementById('brocode').onclick = function{
+	Ready();
+	firebase.database().ref('price/' + itemsV).set({
+		Totalitems: itemsV,
+		Totalprice: priceV
+	});
+	alart('data entered')
+}
+   	
+   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -324,6 +393,10 @@
 
 
 	</script>
+
+
+
+
 
 
 </body>
