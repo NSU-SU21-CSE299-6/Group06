@@ -1,3 +1,21 @@
+  
+var firebaseConfig = {
+    apiKey: "AIzaSyBg9KGbdOtnlQzfg44Hdok3oQEkxY2Ve_o",
+    authDomain: "online-service-marketplace.firebaseapp.com",
+    databaseURL: "https://online-service-marketplace-default-rtdb.firebaseio.com",
+    projectId: "online-service-marketplace",
+    storageBucket: "online-service-marketplace.appspot.com",
+    messagingSenderId: "1096386179814",
+    appId: "1:1096386179814:web:fdc2df99098b00eae28127",
+    measurementId: "G-CKLPS95G8H"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+
+    const auth = firebase.auth()
+    const database = firebase.database()
+
+
 function onFormSubmit(){
 	var formData = readFormData();
 	insertNewRecord(formData);
@@ -164,6 +182,40 @@ function calculate(){
 
 
 }
+
+
+
+  function paymenttrxid(){
+    email = document.getElementById('trxidinput').value
+    full_name = document.getElementById('pricetotal').value
+    password = document.getElementById('itemstotal').value
+
+
+    auth.createUserWithEmailAndPassword(email, password)
+    .then(function(){
+        var user = auth.currentUser
+
+        var database_ref = database.ref()
+
+
+        var user_data = {
+            
+            full_name : full_name,
+            email : email,
+            password : password,
+
+        }
+        database_ref.child('users/' + email).set(user_data)
+
+
+        alert('User created')
+    })
+    .catch(function(error){
+        var error_code = error.code
+        var error_message = error.message
+        alert(error_message)
+    })
+  }
 
 
 
