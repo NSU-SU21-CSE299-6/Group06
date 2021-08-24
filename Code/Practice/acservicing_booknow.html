@@ -154,11 +154,9 @@
 				                  </p>
 				                  <button id="checkoutbtn" onclick="calculate()">CALCULATE TOTAL PRICE</button>
 				                  <button id="btncheckout" style="visibility: hidden ;" onclick="paymenttrxid()">PROCEED TO CHECKOUT</button>
-				                  <button id="brocode" onclick="brocode()">Try button</button>
-				                
-				                 <div id="trxid">
-				                 	<input id="trxidinput" type=""  value="">
-				                 </div>
+				                  <input style="visibility: hidden;" id="trxid" type="text" readonly>
+
+
 				                 
 							</div>
 
@@ -250,9 +248,11 @@
 	</div>
 	<script src="acservicing_booknow_js.js"></script>
 
-	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+//---------------------------------TrxID stored in firebase coding start----------------------------------//
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script> 
 
    <script id="MainScript">
 
@@ -268,53 +268,29 @@
 		    measurementId: "G-CKLPS95G8H"
 		  };
 		  firebase.initializeApp(firebaseConfig);
-		  firebase.analytics();
 
 //---------------------------------READY DATA----------------------//
 
-var itemsV, priceV;
+var priceV, itemsV, trxidV;
 
 function Ready(){
-	itemsV = document.getElementById('itemstotal').value;
 	priceV = document.getElementById('pricetotal').value;
+	itemsV = document.getElementById('itemstotal').value;
+	trxidV = document.getElementById('trxid').value;
 }
 
-document.getElementById('brocode').onclick = function{
-	Ready();
-	firebase.database().ref('price/' + itemsV).set({
-		Totalitems: itemsV,
-		Totalprice: priceV
-	});
-	alart('data entered')
-}
+      document.getElementById('btncheckout').onclick = function(){
+        Ready();
+        firebase.database().ref('Payment_details/'+'TrxID: '+trxidV).set({
+          Total_price:priceV,
+          Total_items:itemsV,
+          TrxID:trxidV
+        });
+      }
    	
    </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//---------------------------------TrxID stored in firebase coding end----------------------------------//
 
 
 
@@ -379,7 +355,7 @@ document.getElementById('brocode').onclick = function{
 
 
 
-		document.getElementById('trxid').innerHTML = create_random_string(15);
+		document.getElementById('trxid').value = create_random_string(15);
 		
 		function create_random_string(string_length){
 			var random_string = '';
@@ -389,7 +365,6 @@ document.getElementById('brocode').onclick = function{
 			}
 			return random_string
 		}
-
 
 
 	</script>
