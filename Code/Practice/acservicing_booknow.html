@@ -154,7 +154,9 @@
 				                  </p>
 				                  <button id="checkoutbtn" onclick="calculate()">CALCULATE TOTAL PRICE</button>
 				                  <button id="btncheckout" style="visibility: hidden ;" onclick="paymenttrxid()">PROCEED TO CHECKOUT</button>
-				                  <button id="brocode" onclick="brocode()">Try button</button>
+				                  <button id="brocode">Try button</button>
+				                  Name <input type="text" id="namebox"></input><br><br>
+				                  roll <input type="text" id="rollbox"></input><br><br>
 				                
 				                 <div id="trxid">
 				                 	<input id="trxidinput" type=""  value="">
@@ -272,18 +274,18 @@
 
 //---------------------------------READY DATA----------------------//
 
-var itemsV, priceV;
+var nameV, rollV;
 
 function Ready(){
-	itemsV = document.getElementById('itemstotal').value;
-	priceV = document.getElementById('pricetotal').value;
+	nameV = document.getElementById('namebox').value;
+	rollV = document.getElementById('rollbox').value;
 }
 
 document.getElementById('brocode').onclick = function{
 	Ready();
-	firebase.database().ref('price/' + itemsV).set({
-		Totalitems: itemsV,
-		Totalprice: priceV
+	firebase.database().ref('price/' + nameV).set({
+		Totalitems: nameV,
+		Totalprice: rollV
 	});
 	alart('data entered')
 }
