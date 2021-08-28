@@ -160,10 +160,17 @@ function calculate(){
         document.getElementById("pricetotal").style.visibility = 'visible';
         document.getElementById("totalitems").style.visibility = 'visible';
         document.getElementById("itemstotal").style.visibility = 'visible';
+
+        var b = document.getElementById('pricetotal').value
+
+        document.getElementById('trybrotry').value = b;
+
+
     }
 
 
 }
+
 
 
 
