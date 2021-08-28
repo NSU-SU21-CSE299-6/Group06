@@ -143,7 +143,7 @@
                           </table>
 
 
-                          <p>
+                              <p>
 					                <span id="totalpricename" style="visibility: hidden ;">Total price</span>
 					                
 					                <input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none; visibility: hidden ;"  type="" id="pricetotal" value="0" readonly>
@@ -162,18 +162,17 @@
 
 
 
-				                  <form method="get" action="Login_or_without_login.html">
-										<input id="trybrotry" value="">
-										<input type="submit" value="click" onclick="paymenttrxid()">
-									   </form>
+<form action="Login_or_without_login.html">
+	<input id="trybrotry" value="">
+</form>
+										
 
 
 
 
 
 
-
-				                  <button id="btncheckout" style="visibility: hidden ;" onclick="">PROCEED TO CHECKOUT</button>
+				                  <button id="btncheckout" style="visibility: hidden ;" onclick="paymenttrxid()">PROCEED TO CHECKOUT</button>
 				                  <input style="visibility: hidden;" id="trxid" type="text" readonly>
 
 
@@ -301,28 +300,23 @@ function Ready(){
 	priceV = document.getElementById('pricetotal').value;
 	itemsV = document.getElementById('itemstotal').value;
 	trxidV = document.getElementById('trxid').value;
+
+
 }
 
 
-function paymenttrxid(){
-	        Ready();
+      document.getElementById('btncheckout').onclick = function(){
+        Ready();
         firebase.database().ref('Payment_details/'+'TrxID: '+trxidV).set({
           Total_price:priceV,
           Total_items:itemsV,
           TrxID:trxidV
         });
-
-         var name = document.getElementById("trybrotry").value;
-			localStorage.setItem("valuetxt",name);
-			return false;
-}
-
+      }
 
    </script>
 
 //---------------------------------TrxID stored in firebase coding end----------------------------------//
-
-
 
 
 
@@ -398,15 +392,6 @@ function paymenttrxid(){
 
 
 	</script>
-
-
-	<script>
-		function passvalue(){
-
-		}
-	</script>
-
-
 
 
 
