@@ -153,7 +153,27 @@
 				                 	<input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none;  visibility: hidden ;"  type="" id="itemstotal" value="0" readonly>
 				                  </p>
 				                  <button id="checkoutbtn" onclick="calculate()">CALCULATE TOTAL PRICE</button>
-				                  <button id="btncheckout" style="visibility: hidden ;" onclick="paymenttrxid()">PROCEED TO CHECKOUT</button>
+
+
+
+
+
+
+
+
+
+				                  <form method="get" action="Login_or_without_login.html">
+										<input id="trybrotry" value="">
+										<input type="submit" value="click" onclick="paymenttrxid()">
+									   </form>
+
+
+
+
+
+
+
+				                  <button id="btncheckout" style="visibility: hidden ;" onclick="">PROCEED TO CHECKOUT</button>
 				                  <input style="visibility: hidden;" id="trxid" type="text" readonly>
 
 
@@ -174,6 +194,10 @@
 
 		
 	</div>
+
+
+
+
 
 
 
@@ -279,15 +303,21 @@ function Ready(){
 	trxidV = document.getElementById('trxid').value;
 }
 
-      document.getElementById('btncheckout').onclick = function(){
-        Ready();
+
+function paymenttrxid(){
+	        Ready();
         firebase.database().ref('Payment_details/'+'TrxID: '+trxidV).set({
           Total_price:priceV,
           Total_items:itemsV,
           TrxID:trxidV
         });
-      }
-   	
+
+         var name = document.getElementById("trybrotry").value;
+			localStorage.setItem("valuetxt",name);
+			return false;
+}
+
+
    </script>
 
 //---------------------------------TrxID stored in firebase coding end----------------------------------//
@@ -355,7 +385,7 @@ function Ready(){
 
 
 
-		document.getElementById('trxid').value = create_random_string(15);
+		document.getElementById('trxid').value = create_random_string(7);
 		
 		function create_random_string(string_length){
 			var random_string = '';
@@ -367,6 +397,13 @@ function Ready(){
 		}
 
 
+	</script>
+
+
+	<script>
+		function passvalue(){
+
+		}
 	</script>
 
 
