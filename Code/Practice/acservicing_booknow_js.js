@@ -157,6 +157,10 @@ function calculate(){
 
         document.getElementById("btncheckout").style.visibility = 'visible';
         document.getElementById("checktopassfirebase").style.visibility = 'visible';
+        document.getElementById("termsandconditions").style.visibility = 'visible';
+        document.getElementById("termsandconditions1").style.visibility = 'visible';
+        document.getElementById("termslink").style.visibility = 'visible';
+        
         document.getElementById("totalpricename").style.visibility = 'visible';
         document.getElementById("pricetotal").style.visibility = 'visible';
         document.getElementById("totalitems").style.visibility = 'visible';
