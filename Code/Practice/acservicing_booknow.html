@@ -38,7 +38,6 @@
 
 
 
-
 	<div class="main_container">
 		<div class="container">
 			<div class="cart">
@@ -142,8 +141,8 @@
                              </tbody>
                           </table>
 
-
-                          <p>
+<button style="margin-top: 20px;" id="checkoutbtn" onclick="calculate()">CALCULATE TOTAL PRICE</button>
+                              <p>
 					                <span id="totalpricename" style="visibility: hidden ;">Total price</span>
 					                
 					                <input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none; visibility: hidden ;"  type="" id="pricetotal" value="0" readonly>
@@ -152,16 +151,23 @@
 					               <span id="totalitems" style="visibility: hidden ;">Number of items</span>
 				                 	<input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none;  visibility: hidden ;"  type="" id="itemstotal" value="0" readonly>
 				                  </p>
-				                  <button id="checkoutbtn" onclick="calculate()">CALCULATE TOTAL PRICE</button>
-				                  <button id="btncheckout" style="visibility: hidden ;" onclick="paymenttrxid()">PROCEED TO CHECKOUT</button>
+				                  
+				                  <input id="checktopassfirebase" style="visibility: hidden;" type="checkbox" onclick="enableddl(this)"> 
+				                  <p10 id="termsandconditions" style="display: inline; visibility: hidden;">I read the </p10>
+				                  <a href="google.com" style="display: inline; visibility: hidden;" id="termslink">terms and conditions</a>
+				                  <p10 id="termsandconditions1" style="display: inline; visibility: hidden;">and I accept it </p10>
+
+
+
+												<form action="Login_or_without_login.html">
+													<button id="btncheckout" style="visibility: hidden ;" onclick="paymenttrxid()" disabled="disabled">PROCEED TO CHECKOUT</button>
+													<input id="transferprice" placeholder="transferprice" style="visibility: hidden;" value="">
+													<input id="transferitems" placeholder="transferitems" style="visibility: hidden;" value="">
 				                  <input style="visibility: hidden;" id="trxid" type="text" readonly>
-
-
+												</form>
+										
 				                 
 							</div>
-
-
-
 
 
 			
@@ -170,11 +176,7 @@
 		
 		
 
-		
-
-		
 	</div>
-
 
 
 
@@ -277,23 +279,43 @@ function Ready(){
 	priceV = document.getElementById('pricetotal').value;
 	itemsV = document.getElementById('itemstotal').value;
 	trxidV = document.getElementById('trxid').value;
+
+
 }
 
-      document.getElementById('btncheckout').onclick = function(){
+
+      document.getElementById('checktopassfirebase').onclick = function(){
         Ready();
         firebase.database().ref('Payment_details/'+'TrxID: '+trxidV).set({
           Total_price:priceV,
           Total_items:itemsV,
           TrxID:trxidV
         });
+
+      var ddl = document.getElementById("btncheckout");
+			ddl.disabled = checktopassfirebase.checked ? false : true ;
+			if(!ddl.disabled){
+				ddl.focus();
+			}
+
       }
-   	
+
    </script>
 
 //---------------------------------TrxID stored in firebase coding end----------------------------------//
 
+<script>
+	function paymenttrxid(){
+			var transferprice = document.getElementById("transferprice").value;
+			localStorage.setItem("valuetxt",transferprice);
 
+			var transferitems = document.getElementById("transferitems").value;
+			localStorage.setItem("valuetxt1",transferitems);
 
+			var transfertrxid = document.getElementById("trxid").value;
+			localStorage.setItem("valuetxt2",transfertrxid);
+	}
+</script>
 
 
 	<script>
@@ -313,10 +335,11 @@ function Ready(){
 		inputqnt.addEventListener("keyup", (e) => {
 			const value = e.currentTarget.value;
 
-			if(value === "0" || value === ""){
-				buttonacbasictotalbtn.disabled = true;
-			} else {
+			if(value === "1" || value === "2" || value === "3" || value === "4" || value === "5"){
 				buttonacbasictotalbtn.disabled = false;
+			} else {
+				buttonacbasictotalbtn.disabled = true;
+
 			}
 		});
 
@@ -324,30 +347,30 @@ function Ready(){
 		inputqnt1.addEventListener("keyup", (e) => {
 			const value = e.currentTarget.value;
 
-			if(value === "0" || value === ""){
-				buttonacmastertotalbtn.disabled = true;
-			} else {
+			if(value === "1" || value === "2" || value === "3" || value === "4" || value === "5"){
 				buttonacmastertotalbtn.disabled = false;
+			} else {
+				buttonacmastertotalbtn.disabled = true;
 			}
 		});
 
 		inputqnt2.addEventListener("keyup", (e) => {
 			const value = e.currentTarget.value;
 
-			if(value === "0" || value === ""){
-				buttonacwatertotalbtn.disabled = true;
-			} else {
+			if(value === "1" || value === "2" || value === "3" || value === "4" || value === "5"){
 				buttonacwatertotalbtn.disabled = false;
+			} else {
+				buttonacwatertotalbtn.disabled = true;
 			}
 		});
 
 		inputqnt3.addEventListener("keyup", (e) => {
 			const value = e.currentTarget.value;
 
-			if(value === "0" || value === ""){
-				buttonacjettotal.disabled = true;
-			} else {
+			if(value === "1" || value === "2" || value === "3" || value === "4" || value === "5"){
 				buttonacjettotal.disabled = false;
+			} else {
+				buttonacjettotal.disabled = true;
 			}
 		});
 
@@ -355,7 +378,7 @@ function Ready(){
 
 
 
-		document.getElementById('trxid').value = create_random_string(15);
+		document.getElementById('trxid').value = create_random_string(7);
 		
 		function create_random_string(string_length){
 			var random_string = '';
@@ -369,7 +392,11 @@ function Ready(){
 
 	</script>
 
+	<script>
+		function enableddl(checktopassfirebase){
 
+		}
+	</script>
 
 
 

@@ -236,7 +236,7 @@
 .cart-total p{
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	font-size: 20px;
 }
 
@@ -257,6 +257,10 @@
 
 #btncheckout:hover{
 	background-color: #C82907;
+}
+
+#btncheckout:disabled{
+	background-color: #DCD8D8;
 }
 
 
@@ -469,11 +473,33 @@ tr:nth-child(even),table.list thead>tr{
 }
 
 
+#checktopassfirebase{
+	height: 15px;
+	width: 15px;
+	margin-top: 10px;
+}
 
 
+#termsandconditions{
+	font-family: 'Chakra Petch', sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+}
 
+#termsandconditions1{
+	font-family: 'Chakra Petch', sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+}
 
-
+#termslink{
+	background-color: white;
+	color: blue;
+		font-family: 'Chakra Petch', sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	text-decoration: underline;
+}
 
 
 
