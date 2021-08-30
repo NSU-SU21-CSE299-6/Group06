@@ -236,7 +236,7 @@
 .cart-total p{
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	font-size: 20px;
 }
 
@@ -477,6 +477,12 @@ tr:nth-child(even),table.list thead>tr{
 
 
 #termsandconditions{
+	font-family: 'Chakra Petch', sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+#termsandconditions1{
 	font-family: 'Chakra Petch', sans-serif;
 	font-size: 17px;
 	font-weight: bold;

@@ -142,7 +142,7 @@
                              </tbody>
                           </table>
 
-
+<button style="margin-top: 20px;" id="checkoutbtn" onclick="calculate()">CALCULATE TOTAL PRICE</button>
                               <p>
 					                <span id="totalpricename" style="visibility: hidden ;">Total price</span>
 					                
@@ -152,11 +152,11 @@
 					               <span id="totalitems" style="visibility: hidden ;">Number of items</span>
 				                 	<input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none;  visibility: hidden ;"  type="" id="itemstotal" value="0" readonly>
 				                  </p>
-				                  <button id="checkoutbtn" onclick="calculate()">CALCULATE TOTAL PRICE</button>
-				                  <input id="checktopassfirebase" style="visibility: ;" type="checkbox" > 
-				                  <p10 id="termsandconditions" style="display: inline;">I read the </p10>
-				                  <a href="google.com" style="display: inline;" id="termslink">terms and conditions</a>
-				                  <p10 id="termsandconditions" style="display: inline;">and I accept it </p10>
+				                  
+				                  <input id="checktopassfirebase" style="visibility: hidden;" type="checkbox" > 
+				                  <p10 id="termsandconditions" style="display: inline; visibility: hidden;">I read the </p10>
+				                  <a href="google.com" style="display: inline; visibility: hidden;" id="termslink">terms and conditions</a>
+				                  <p10 id="termsandconditions1" style="display: inline; visibility: hidden;">and I accept it </p10>
 				                  
 
 
@@ -166,25 +166,16 @@
 
 
 												<form action="Login_or_without_login.html">
-													<input id="transferprice" placeholder="transferprice" value="">
-													<input id="transferitems" placeholder="transferitems" value="">
 													<button id="btncheckout" style="visibility: hidden ;" onclick="paymenttrxid()">PROCEED TO CHECKOUT</button>
-				                  <input style="visibility: ;" id="trxid" type="text" readonly>
+													<input id="transferprice" placeholder="transferprice" style="visibility: hidden;" value="">
+													<input id="transferitems" placeholder="transferitems" style="visibility: hidden;" value="">
+				                  <input style="visibility: hidden;" id="trxid" type="text" readonly>
 												</form>
 										
 
 
-
-
-
-
-
-
-
 				                 
 							</div>
-
-
 
 
 
@@ -198,10 +189,6 @@
 
 		
 	</div>
-
-
-
-
 
 
 
@@ -354,10 +341,11 @@ function Ready(){
 		inputqnt.addEventListener("keyup", (e) => {
 			const value = e.currentTarget.value;
 
-			if(value === "0" || value === ""){
-				buttonacbasictotalbtn.disabled = true;
-			} else {
+			if(value === "1" || value === "2" || value === "3" || value === "4" || value === "5"){
 				buttonacbasictotalbtn.disabled = false;
+			} else {
+				buttonacbasictotalbtn.disabled = true;
+
 			}
 		});
 
@@ -365,30 +353,30 @@ function Ready(){
 		inputqnt1.addEventListener("keyup", (e) => {
 			const value = e.currentTarget.value;
 
-			if(value === "0" || value === ""){
-				buttonacmastertotalbtn.disabled = true;
-			} else {
+			if(value === "1" || value === "2" || value === "3" || value === "4" || value === "5"){
 				buttonacmastertotalbtn.disabled = false;
+			} else {
+				buttonacmastertotalbtn.disabled = true;
 			}
 		});
 
 		inputqnt2.addEventListener("keyup", (e) => {
 			const value = e.currentTarget.value;
 
-			if(value === "0" || value === ""){
-				buttonacwatertotalbtn.disabled = true;
-			} else {
+			if(value === "1" || value === "2" || value === "3" || value === "4" || value === "5"){
 				buttonacwatertotalbtn.disabled = false;
+			} else {
+				buttonacwatertotalbtn.disabled = true;
 			}
 		});
 
 		inputqnt3.addEventListener("keyup", (e) => {
 			const value = e.currentTarget.value;
 
-			if(value === "0" || value === ""){
-				buttonacjettotal.disabled = true;
-			} else {
+			if(value === "1" || value === "2" || value === "3" || value === "4" || value === "5"){
 				buttonacjettotal.disabled = false;
+			} else {
+				buttonacjettotal.disabled = true;
 			}
 		});
 
