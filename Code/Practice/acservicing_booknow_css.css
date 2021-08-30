@@ -469,11 +469,27 @@ tr:nth-child(even),table.list thead>tr{
 }
 
 
+#checktopassfirebase{
+	height: 15px;
+	width: 15px;
+	margin-top: 10px;
+}
 
 
+#termsandconditions{
+	font-family: 'Chakra Petch', sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+}
 
-
-
+#termslink{
+	background-color: white;
+	color: blue;
+		font-family: 'Chakra Petch', sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	text-decoration: underline;
+}
 
 
 

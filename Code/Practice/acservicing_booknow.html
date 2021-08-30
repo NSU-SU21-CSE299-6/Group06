@@ -154,7 +154,9 @@
 				                  </p>
 				                  <button id="checkoutbtn" onclick="calculate()">CALCULATE TOTAL PRICE</button>
 				                  <input id="checktopassfirebase" style="visibility: ;" type="checkbox" > 
-				                  <p style="display: inline;">I accept all terms and conditions</p>
+				                  <p10 id="termsandconditions" style="display: inline;">I read the </p10>
+				                  <a href="google.com" style="display: inline;" id="termslink">terms and conditions</a>
+				                  <p10 id="termsandconditions" style="display: inline;">and I accept it </p10>
 				                  
 
 
@@ -163,9 +165,12 @@
 
 
 
-<form action="Login_or_without_login.html">
-	<input id="trybrotry" value="">
-</form>
+												<form action="Login_or_without_login.html">
+													<input id="transferprice" placeholder="transferprice" value="">
+													<input id="transferitems" placeholder="transferitems" value="">
+													<button id="btncheckout" style="visibility: hidden ;" onclick="paymenttrxid()">PROCEED TO CHECKOUT</button>
+				                  <input style="visibility: ;" id="trxid" type="text" readonly>
+												</form>
 										
 
 
@@ -173,8 +178,7 @@
 
 
 
-				                  <button id="btncheckout" style="visibility: hidden ;" onclick="paymenttrxid()">PROCEED TO CHECKOUT</button>
-				                  <input style="visibility: hidden;" id="trxid" type="text" readonly>
+
 
 
 				                 
@@ -319,6 +323,18 @@ function Ready(){
 
 //---------------------------------TrxID stored in firebase coding end----------------------------------//
 
+<script>
+	function paymenttrxid(){
+			var transferprice = document.getElementById("transferprice").value;
+			localStorage.setItem("valuetxt",transferprice);
+
+			var transferitems = document.getElementById("transferitems").value;
+			localStorage.setItem("valuetxt1",transferitems);
+
+			var transfertrxid = document.getElementById("trxid").value;
+			localStorage.setItem("valuetxt2",transfertrxid);
+	}
+</script>
 
 
 	<script>
