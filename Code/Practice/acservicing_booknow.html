@@ -153,8 +153,9 @@
 				                 	<input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none;  visibility: hidden ;"  type="" id="itemstotal" value="0" readonly>
 				                  </p>
 				                  <button id="checkoutbtn" onclick="calculate()">CALCULATE TOTAL PRICE</button>
-
-
+				                  <input id="checktopassfirebase" style="visibility: ;" type="checkbox" > 
+				                  <p style="display: inline;">I accept all terms and conditions</p>
+				                  
 
 
 
@@ -305,7 +306,7 @@ function Ready(){
 }
 
 
-      document.getElementById('btncheckout').onclick = function(){
+      document.getElementById('checktopassfirebase').onclick = function(){
         Ready();
         firebase.database().ref('Payment_details/'+'TrxID: '+trxidV).set({
           Total_price:priceV,
