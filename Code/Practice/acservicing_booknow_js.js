@@ -156,14 +156,17 @@ function calculate(){
 
 
         document.getElementById("btncheckout").style.visibility = 'visible';
+        document.getElementById("checktopassfirebase").style.visibility = 'visible';
         document.getElementById("totalpricename").style.visibility = 'visible';
         document.getElementById("pricetotal").style.visibility = 'visible';
         document.getElementById("totalitems").style.visibility = 'visible';
         document.getElementById("itemstotal").style.visibility = 'visible';
 
         var b = document.getElementById('pricetotal').value
+        document.getElementById('transferprice').value = b;
 
-        document.getElementById('trybrotry').value = b;
+        var a = document.getElementById('itemstotal').value
+        document.getElementById('transferitems').value = a;
 
 
     }
