@@ -259,6 +259,10 @@
 	background-color: #C82907;
 }
 
+#btncheckout:disabled{
+	background-color: #DCD8D8;
+}
+
 
 .cart-total a{
 	display: block;

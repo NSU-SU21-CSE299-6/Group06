@@ -38,7 +38,6 @@
 
 
 
-
 	<div class="main_container">
 		<div class="container">
 			<div class="cart">
@@ -153,30 +152,22 @@
 				                 	<input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none;  visibility: hidden ;"  type="" id="itemstotal" value="0" readonly>
 				                  </p>
 				                  
-				                  <input id="checktopassfirebase" style="visibility: hidden;" type="checkbox" > 
+				                  <input id="checktopassfirebase" style="visibility: hidden;" type="checkbox" onclick="enableddl(this)"> 
 				                  <p10 id="termsandconditions" style="display: inline; visibility: hidden;">I read the </p10>
 				                  <a href="google.com" style="display: inline; visibility: hidden;" id="termslink">terms and conditions</a>
 				                  <p10 id="termsandconditions1" style="display: inline; visibility: hidden;">and I accept it </p10>
-				                  
-
-
-
-
 
 
 
 												<form action="Login_or_without_login.html">
-													<button id="btncheckout" style="visibility: hidden ;" onclick="paymenttrxid()">PROCEED TO CHECKOUT</button>
+													<button id="btncheckout" style="visibility: hidden ;" onclick="paymenttrxid()" disabled="disabled">PROCEED TO CHECKOUT</button>
 													<input id="transferprice" placeholder="transferprice" style="visibility: hidden;" value="">
 													<input id="transferitems" placeholder="transferitems" style="visibility: hidden;" value="">
 				                  <input style="visibility: hidden;" id="trxid" type="text" readonly>
 												</form>
 										
-
-
 				                 
 							</div>
-
 
 
 			
@@ -185,11 +176,7 @@
 		
 		
 
-		
-
-		
 	</div>
-
 
 
 
@@ -304,6 +291,13 @@ function Ready(){
           Total_items:itemsV,
           TrxID:trxidV
         });
+
+      var ddl = document.getElementById("btncheckout");
+			ddl.disabled = checktopassfirebase.checked ? false : true ;
+			if(!ddl.disabled){
+				ddl.focus();
+			}
+
       }
 
    </script>
@@ -396,6 +390,12 @@ function Ready(){
 		}
 
 
+	</script>
+
+	<script>
+		function enableddl(checktopassfirebase){
+
+		}
 	</script>
 
 
