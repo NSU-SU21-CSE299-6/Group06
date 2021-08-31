@@ -154,7 +154,7 @@
 				                  
 				                  <input id="checktopassfirebase" style="visibility: hidden;" type="checkbox" onclick="enableddl(this)"> 
 				                  <p10 id="termsandconditions" style="display: inline; visibility: hidden;">I read the </p10>
-				                  <a href="google.com" style="display: inline; visibility: hidden;" id="termslink">terms and conditions</a>
+				                  <a style="display: inline; visibility: hidden;" id="termslink" onclick="showDialog()">terms and conditions</a>
 				                  <p10 id="termsandconditions1" style="display: inline; visibility: hidden;">and I accept it </p10>
 
 
@@ -177,6 +177,32 @@
 		
 
 	</div>
+
+
+        <div id="white-background">
+        </div>
+        <div id="dlgbox">
+            <div id="dlg-header">Terms & Conditions</div>
+
+
+
+
+            <div id="dlg-body">
+            				     	<h1>Acceptance of Terms</h1>
+						<p>PLEASE READ THE TERMS OF USE THOROUGHLY AND CAREFULLY. The terms and conditions set forth below ("Terms of Use") and the Privacy Policy (as defined below) constitute a legally-binding agreement between Service.com.bd operating from its Dhaka Corporate Office and you. These Terms of Use contain provisions that define your limits, legal rights and obligations with respect to your use of and participation in (i) the Service.com.bd website and mobile application, including the classified advertisements, forums, various email functions and Internet links, and all content and Service.com.bd services available through the domain and sub-domains of Service.com.bd located at www.service.com.bd or Its Mobile Apps(collectively referred to herein as the "Product"), and (ii) the online transactions between those users of the Product who are offering services (each, a "SERVICE PROVIDER") and those users of the Product who are obtaining services (each, a "SERVICE USER") through the Product (such services, collectively, the "Services"). The Terms of Use described below incorporate the Privacy Policy and apply to all users of the Website, including users who are also contributors of video content, information, private and public messages, advertisements, and other materials or Services on the Product.<br><br>
+
+
+						YOU SPECIFICALLY AGREE THAT BY USING THE PRODUCT, YOU ARE AT LEAST 18 YEARS OF AGE AND YOU ARE COMPETENT UNDER LAW TO ENTER INTO A LEGALLY BINDING AND ENFORCEABLE CONTRACT.
+
+						All references to "you" or "your," as applicable, mean the person that accesses, uses, and/or participates in the Website in any manner.</p>
+
+						<h1>Modifications to Terms of Use and/or Privacy Policy</h1>
+						<p>Service.com.bd reserves the right, in its sole discretion, to change, modify, or otherwise amend the Terms of Use, and any other documents incorporated by reference herein for complying with legal and regulatory framework and for other legitimate business purposes, at any time, and Service.com.bd will post the amended Terms of Use at the domain of www.service.com.bd/terms-and-condition. It is your responsibility to review the Terms of Use for any changes and you are encouraged to check the Terms of Use frequently. Your use of the Product following any amendment of the Terms of Use will signify your assent to and acceptance of any revised Terms of Use. If you do not agree to abide by these or any future Terms of Use, please do not use or access the Product.</p>
+            </div>
+            <div id="dlg-footer">
+                <button onclick="dlgLogin()">Ok, I understand</button>
+            </div>
+        </div>
 
 
 
@@ -248,9 +274,14 @@
 	<div id="copyright">
 		<center>Copyright © 2021 Service Platform Limited | All Rights Reserved</center>
 	</div>
+
+
+
+
+
 	<script src="acservicing_booknow_js.js"></script>
 
-//---------------------------------TrxID stored in firebase coding start----------------------------------//
+<!---------------------------------TrxID stored in firebase coding start---------------------------------->
 
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
@@ -302,7 +333,7 @@ function Ready(){
 
    </script>
 
-//---------------------------------TrxID stored in firebase coding end----------------------------------//
+<!---------------------------------TrxID stored in firebase coding end---------------------------------->
 
 <script>
 	function paymenttrxid(){
@@ -392,14 +423,29 @@ function Ready(){
 
 	</script>
 
-	<script>
-		function enableddl(checktopassfirebase){
 
-		}
-	</script>
-
-
-
+<!--------------------------------------------- script of dialog ------------------------------------->
+        <script>
+            function dlgLogin(){
+                var whitebg = document.getElementById("white-background");
+                var dlg = document.getElementById("dlgbox");
+                whitebg.style.display = "none";
+                dlg.style.display = "none";
+            }
+            
+            function showDialog(){
+                var whitebg = document.getElementById("white-background");
+                var dlg = document.getElementById("dlgbox");
+                whitebg.style.display = "block";
+                dlg.style.display = "block";
+                
+                var winWidth = window.innerWidth;
+                var winHeight = window.innerHeight;
+                
+                dlg.style.left = (winWidth/2) - 900/2 + "px";
+                dlg.style.top = "70px";
+            }
+        </script>
 
 </body>
 </html>
