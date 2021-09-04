@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout Card</title>
+    
+    <link rel="stylesheet" href="address_payment.css">
+</head>
+<body>
+
+<h1><center>Checkout</center></h1>
+<div class="row">
+    <div class="col-75">
+        <div class="container">
+            <form id="validate" action="">
+                <div class="row">
+                    <div class="col-50">
+                        <h3>Billing Details</h3>
+                        <label for="fname"><i class="fa fa-user"></i> Full Name *</label>
+                        <input type="text" id="fname" name="fullname" placeholder="Ex. Pinaki Ranjan Das" required>
+                        <label for="email"><i class="fa fa-envelope"></i> Email *</label>
+                        <input type="text" id="email" name="email" placeholder="Ex. pinaki@service.com.bd" required>
+                        <label for="email"><i class="fa fa-envelope"></i> Phone no *</label>
+                        <input type="text" id="email" name="email" placeholder="Ex. 017XX XXXXXX" required>
+                        <label for="adr"><i class="fa fa-address-card-o"></i> District</label>
+                        <input type="text" id="adr" name="address" placeholder="Ex. Dhaka" required>
+                        <label for="adr"><i class="fa fa-address-card-o"></i> Full Address</label>
+                        <input type="text" id="adr" name="address" placeholder="Ex. 124/A Bashundhara" style="height: 80px;" required>
+                        
+                        
+                    </div>
+
+                    <div class="col-50">
+                        <h3>Payment Details</h3>
+                        <label for="fname">Payment Method</label>
+
+                        
+                        <div class="payment-method">
+
+
+        <label for="pay" class="method Spay">
+        
+          
+          <div class="radio-input">
+            <input style="position: absolute; margin-top: 15px;" id="pay" type="radio" name="payment" checked><img style="margin-left: 25px;" src="Spay.png"/>
+            
+          </div>
+        </label>
+      </div>   
+                        <label for="cname">Enter Total Amount </label>
+                        <input type="text" id="cname" name="cardname" placeholder="Amount "required>
+                        <label for="ccnum">Transaction ID</label>
+                        <input type="text" id="ccnum" name="cardnumber" placeholder="XXXX-XXXX"required>
+                        
+                      
+                    </div>
+                </div>
+
+                <input type="submit" value="Continue to checkout" class="btn">
+            </form>
+        </div>
+    </div>
+    
+</div>
+
+</body>
+</html>
