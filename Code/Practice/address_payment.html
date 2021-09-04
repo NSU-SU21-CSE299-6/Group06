@@ -2,6 +2,13 @@
 <html>
 <head>
     <title>Checkout Card</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Courgette&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Della+Respira&family=Eczar:wght@400;500;600&family=Lobster&family=Merienda&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;1,400&family=Niconne&family=Pacifico&family=Ubuntu:wght@300&family=Uchen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="acservicing_booknow_css.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/0871cdca69.js" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="address_payment.css">
 </head>
@@ -14,15 +21,16 @@
             <form id="validate" action="">
                 <div class="row">
                     <div class="col-50">
+                        
                         <h3>Billing Details</h3>
                         <label for="fname"><i class="fa fa-user"></i> Full Name *</label>
                         <input type="text" id="fname" name="fullname" placeholder="Ex. Pinaki Ranjan Das" required>
                         <label for="email"><i class="fa fa-envelope"></i> Email *</label>
                         <input type="text" id="email" name="email" placeholder="Ex. pinaki@service.com.bd" required>
                         <label for="email"><i class="fa fa-envelope"></i> Phone no *</label>
-                        <input type="text" id="email" name="email" placeholder="Ex. 017XX XXXXXX" required>
+                        <input type="text" id="phoneno1" name="email" placeholder="Ex. 017XX XXXXXX" required>
                         <label for="adr"><i class="fa fa-address-card-o"></i> District</label>
-                        <input type="text" id="adr" name="address" placeholder="Ex. Dhaka" required>
+                        <input type="text" id="dist" name="address" placeholder="Ex. Dhaka" required>
                         <label for="adr"><i class="fa fa-address-card-o"></i> Full Address</label>
                         <input type="text" id="adr" name="address" placeholder="Ex. 124/A Bashundhara" style="height: 80px;" required>
                         
@@ -46,10 +54,16 @@
           </div>
         </label>
       </div>   
-                        <label for="cname">Enter Total Amount </label>
-                        <input type="text" id="cname" name="cardname" placeholder="Amount "required>
-                        <label for="ccnum">Transaction ID</label>
-                        <input type="text" id="ccnum" name="cardnumber" placeholder="XXXX-XXXX"required>
+
+                        <label style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px;">Total amount:</label>
+                         <input type="text" id="pricewithoutlogin" name="cardname" style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; text-align: right; border: none;"><br><br><br>
+
+                        <label style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px;">Total items:</label>
+                        <input type="text" id="itemswithoutlogin" name="cardname" style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; text-align: right; border: none;"><br><br><br>
+
+                        <label style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px;">Transaction ID:</label>
+                        <input type="text" id="trxidwithoutlogin" name="cardnumber" placeholder="XXXX-XXXX"required style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px;">
+                        
                         
                       
                     </div>
@@ -61,6 +75,15 @@
     </div>
     
 </div>
+
+
+
+<script>
+        document.getElementById("pricewithoutlogin").value = localStorage.getItem("valuetxt");
+        document.getElementById("itemswithoutlogin").value = localStorage.getItem("valuetxt1");
+        document.getElementById("trxidwithoutlogin").value = localStorage.getItem("valuetxt2");
+</script>
+
 
 </body>
 </html>
