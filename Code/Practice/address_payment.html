@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Checkout Card</title>
+    <title>Checkout Cart</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -105,7 +105,6 @@
 
 
         <div class="container" id="container">
-            <form id="validate" action="">
                 <div class="row">
                     <div class="col-50">
                         
@@ -157,11 +156,17 @@
                 </div>
 
                 <input type="submit" value="Continue to checkout" class="btn">
-            </form>
+                <button onclick="continuetocheckout()">Hello</button>
         </div>
     </div>
     
 </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+
 
 
 
@@ -201,7 +206,7 @@
         });
     </script>
 
-
+<script src="address_payment.js"></script>
 
 </body>
 </html>
