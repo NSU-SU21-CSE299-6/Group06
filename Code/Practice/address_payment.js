@@ -15,22 +15,39 @@ var firebaseConfig = {
   const auth = firebase.auth()
   const database = firebase.database()
 
-
+  // set up login fields
 function continuetocheckout() {
   // Get all our input fields
-  let Total_price = document.getElementById('pricewithoutlogin').value
-  let TrxID = document.getElementById('trxidwithoutlogin').value
+  var TrxID = document.getElementById('trxidwithoutlogin').value
+  //Total_price = document.getElementById('pricewithoutlogin').value
 
-if(TrxID == ""){
-  alert("Please enter transaction ID")
-}else{
-  var user_ref = database.ref('Payment_details/' + TrxID)
-  user_ref.on('value',function(snapshot){
+
+  var user_ref = database.ref('Payment_details/' + 'TrxID: ' +TrxID)
+
+  user_ref.on('value', function(snapshot) {
+
     var data = snapshot.val()
 
-    alert(data.Total_price)
-  })
-}
+    if(TrxID == ""){
+      alert('Please enter your Transaction ID')
+    }else{
+      if(data = snapshot.val()){
+      alert('Your payment is successfull:  ' + data.TrxID)
+    } else{
+      alert('Transaction ID does not matched')
+    }
+    }
+    
+    
+
+
+    
+
+    
+
+  });
+
+
 
 }
 
