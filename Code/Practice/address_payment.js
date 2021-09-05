@@ -29,12 +29,13 @@ function continuetocheckout() {
     var data = snapshot.val()
 
     if(TrxID == ""){
-      alert('Please enter your Transaction ID')
+      swal("Transaction ID blanked", "Please enter your transaction ID", "warning");
     }else{
       if(data = snapshot.val()){
-      alert('Your payment is successfull:  ' + data.TrxID)
+      
+        swal("Thank you", "Your payment is successfull", "success");
     } else{
-      alert('Transaction ID does not matched')
+      swal("Sorry to say", "Your Transaction ID does not matched", "error");
     }
     }
     
