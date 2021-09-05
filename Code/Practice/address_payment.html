@@ -28,11 +28,6 @@
 
 
 
-
-
-
-
-
         <div class="container" id="container1" style="display: none;">
             <form id="validate" action="">
                 <div class="row">
@@ -90,44 +85,32 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div class="container" id="container">
                 <div class="row">
                     <div class="col-50">
                         
-                        <h3>Billing Details</h3>
-                        <label for="fname"><i class="fa fa-user"></i> Full Name *</label>
-                        <input type="text" id="fname" name="fullname" placeholder="Ex. Pinaki Ranjan Das" required>
-                        <label for="email"><i class="fa fa-envelope"></i> Email *</label>
-                        <input type="text" id="email" name="email" placeholder="Ex. pinaki@service.com.bd" required>
-                        <label for="email"><i class="fa fa-envelope"></i> Phone no *</label>
-                        <input type="text" id="phoneno1" name="email" placeholder="Ex. 017XX XXXXXX" required>
-                        <label for="adr"><i class="fa fa-address-card-o"></i> District</label>
-                        <input type="text" id="dist" name="address" placeholder="Ex. Dhaka" required>
-                        <label for="adr"><i class="fa fa-address-card-o"></i> Full Address</label>
-                        <input type="text" id="adr" name="address" placeholder="Ex. 124/A Bashundhara" style="height: 80px;" required>
+                        <h3 style=" font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 30px;">Billing Details</h3>
+                        <label for="fname" style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px;"><i class="fa fa-user" style="display: inline;"></i>Full Name</label>
+                        <input type="text" id="fname" name="fullname" placeholder="Ex. Pinaki Ranjan Das" style="font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 18px;" required>
+
+                        <label for="email" style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px;"><i class="fa fa-envelope"></i> Email</label>
+                        <input type="text" id="email" name="email" placeholder="Ex. pinaki@service.com.bd" style="font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 18px;" required>
+
+                        <label for="mobile" style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px;"><i class="fa fa-mobile"></i> Phone no</label>
+                        <input type="text" id="phoneno1" name="phoneno1" placeholder="Ex. 01711 222 111" style="font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 18px;" required>
+
+                        <label for="dist" style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px;"><i class="fa fa-address-book"></i> District</label>
+                        <input type="text" id="dist" name="address" placeholder="Ex. Dhaka" style="font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 18px;" required>
+
+                        <label for="adr" style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px;"><i class="fa fa-address-card-o"></i> Full Address</label>
+                        <input type="text" id="adr" name="address" placeholder="Ex. 124/A Bashundhara" style="height: 60px; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 18px;" required>
                         
                         
                     </div>
 
                     <div class="col-50">
-                        <h3>Payment Details</h3>
-                        <label for="fname">Payment Method</label>
+                        <h3 style=" font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 30px;">Payment Details</h3>
+                        <label for="fname" style=" font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px;">Payment Method</label>
 
                         
                         <div class="payment-method">
@@ -150,7 +133,10 @@
                         <input type="text" id="itemswithoutlogin" name="cardname" style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; text-align: right; border: none;"><br><br><br>
 
                         <label style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px;">Transaction ID:</label>
-                        <input type="text" id="trxidwithoutlogin" name="cardnumber" placeholder="XXXX-XXXX"required style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px;">
+                        <input type="text" id="trxidwithoutlogin" name="cardnumber" placeholder="Ex. aTdE34a"required style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 18px;">
+
+
+                        <img src="Pay with.gif" id="acservicelogo" style="margin-top: 20px">
 
                         
                         
@@ -175,11 +161,10 @@
 <script>
         document.getElementById("pricewithlogin").value = localStorage.getItem("valuetxtlogin");
         document.getElementById("itemswithlogin").value = localStorage.getItem("valuetxtlogin1");
-        document.getElementById("trxidwithlogin").value = localStorage.getItem("valuetxtlogin2");
 
         document.getElementById("pricewithoutlogin").value = localStorage.getItem("valuetxt");
         document.getElementById("itemswithoutlogin").value = localStorage.getItem("valuetxt1");
-        document.getElementById("trxidwithoutlogin").value = localStorage.getItem("valuetxt2");
+
 </script>
 
 
