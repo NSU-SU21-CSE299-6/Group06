@@ -6,8 +6,8 @@
 	font-family: Century Gothic;
 }
 header{
-	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(homepage_banner.jpg);
-	height: 140vh;
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(homepage_banner.png);
+	height: 50vh;
 	background-size: cover;
 	background-position: center;
 }
@@ -21,7 +21,7 @@ nav .logo{
   font-size: 33px;
   font-weight: bold;
   line-height: 70px;
-  padding-left: 110px;
+  padding-left: 70px;
 }
 nav{
   height: 70px;
@@ -30,7 +30,7 @@ nav{
 }
 nav ul{
   float: right;
-  margin-right: 30px;
+  margin-right: 80px;
 }
 nav ul li{
   display: inline-block;
@@ -38,8 +38,8 @@ nav ul li{
 nav ul li a{
   color: white;
   display: block;
-  padding: 0 15px;
-  line-height: 70px;
+  padding: 0 20px;
+  line-height: 40px;
   font-size: 20px;
   background: #063247;
   transition: .5s;
@@ -103,7 +103,7 @@ section{
 }
 .title h1{
 	font-size: 50px;
-	margin-top: 80px;
+	margin-top: 10px;
 } 
 
 .title p{
@@ -116,8 +116,8 @@ section{
 }
 .searchBar{
 	position:absolute;
-	top:50%;
-	left:55%;
+	top:40%;
+	left:50%;
 	transform: translate(-50%,-50%);
 
 }
@@ -133,5 +133,43 @@ input{
 	top:50%;
 	left:55%;
 	transform: translate(-50%,-50%);
+
+}
+
+.btnAc{
+  position:absolute;
+  top:50%;
+  left:30%;
+  transform: translate(-50%,-50%);
+
+}
+
+.btnPlumbing{
+  position:absolute;
+  top:50%;
+  left:38%;
+  transform: translate(-50%,-50%);
+
+}
+
+.btnAppliance{
+  position:absolute;
+  top:50%;
+  left:48%;
+  transform: translate(-50%,-50%);
+
+}
+.btnPaint{
+  position:absolute;
+  top:50%;
+  left:60%;
+  transform: translate(-50%,-50%);
+
+}
+.btnClean{
+  position:absolute;
+  top:50%;
+  left:70%;
+  transform: translate(-50%,-50%);
 
 }
