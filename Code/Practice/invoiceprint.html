@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Invoice</title>
+</head>
+<body>
+<input type="text" id="trxid" placeholder="trxid">
+<input type="text" id="totalprice" placeholder="totalprice">
+<input type="text" id="totalitems" placeholder="totalitems">
+
+<input type="text" id="fullname" placeholder="fullname">
+<input type="text" id="emailfull" placeholder="emailfull">
+<input type="text" id="phonefull" placeholder="phonefull">
+<input type="text" id="districtfull" placeholder="districtfull">
+<input type="text" id="addressfull" placeholder="addressfull">
+</body>
+
+<script>
+	document.getElementById('trxid').value = localStorage.getItem("trxid1");
+	document.getElementById('totalprice').value = localStorage.getItem("tpricewithout1");
+	document.getElementById('totalitems').value = localStorage.getItem("titemswithout1");
+
+	document.getElementById('fullname').value = localStorage.getItem("fnamewithout");
+	document.getElementById('emailfull').value = localStorage.getItem("emailwithout");
+	document.getElementById('phonefull').value = localStorage.getItem("phonewithout");
+	document.getElementById('districtfull').value = localStorage.getItem("districtwithout");
+	document.getElementById('addressfull').value = localStorage.getItem("addresswithout");
+</script>
+</html>
