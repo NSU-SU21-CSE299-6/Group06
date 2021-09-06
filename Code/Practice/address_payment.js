@@ -15,15 +15,12 @@ var firebaseConfig = {
   const auth = firebase.auth()
   const database = firebase.database()
 
-  // set up login fields
+
 function continuetocheckout() {
-  // Get all our input fields
   var TrxID = document.getElementById('trxidwithoutlogin').value
-  //Total_price = document.getElementById('pricewithoutlogin').value
 
 
   var user_ref = database.ref('Payment_details/' + 'TrxID: ' +TrxID)
-
   user_ref.on('value', function(snapshot) {
 
     var data = snapshot.val()
@@ -32,23 +29,25 @@ function continuetocheckout() {
       swal("Transaction ID blanked", "Please enter your transaction ID", "warning");
     }else{
       if(data = snapshot.val()){
-      
         swal("Thank you", "Your payment is successfull", "success");
+        document.getElementById("verifypayment").style.display = "none";
+        document.getElementById("continueprint").style.display = "block";
+        document.getElementById("trxidwithoutlogin").disabled = "true";
+        document.getElementById("trxidwithoutlogin").style.border = "none";
+
+
     } else{
       swal("Sorry to say", "Your Transaction ID does not matched", "error");
     }
     }
-    
-    
-
-
-    
-
-    
 
   });
+}
 
-
+function continuetoprint(){
+  var trxid = document.getElementById('trxidwithoutlogin').value;
+  var tpricewithout = document.getElementById('pricewithoutlogin').value;
+  var titemswithout = document.getElementById('itemswithoutlogin').value;
 
 }
 

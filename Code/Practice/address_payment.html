@@ -85,7 +85,10 @@
 
 
 
+    
+
         <div class="container" id="container">
+            <form action="try.html">
                 <div class="row">
                     <div class="col-50">
                         
@@ -127,10 +130,10 @@
       </div>   
 
                         <label style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px;">Total amount:</label>
-                         <input type="text" id="pricewithoutlogin" name="cardname" style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; text-align: right; border: none;"><br><br><br>
+                         <input type="text" id="pricewithoutlogin" name="cardname" style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; text-align: right; border: none;" readonly><br><br><br>
 
                         <label style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px;">Total items:</label>
-                        <input type="text" id="itemswithoutlogin" name="cardname" style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; text-align: right; border: none;"><br><br><br>
+                        <input type="text" id="itemswithoutlogin" name="cardname" style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; text-align: right; border: none;" readonly><br><br><br>
 
                         <label style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px;">Transaction ID:</label>
                         <input type="text" id="trxidwithoutlogin" name="cardnumber" placeholder="Ex. aTdE34a"required style="display: inline; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 18px;">
@@ -143,9 +146,15 @@
                       
                     </div>
                 </div>
-
-                <input type="submit" value="Continue to checkout" class="btn" onclick="continuetocheckout()">
+                <input type="submit" value="Continue to print page" class="btn" id="continueprint" onclick="continuetoprint()" style="display: none;">
+</form>
+                <input type="submit" value="Verify Payment" id="verifypayment" class="btn" onclick="continuetocheckout()">
         </div>
+
+
+
+
+
     </div>
     
 </div>
