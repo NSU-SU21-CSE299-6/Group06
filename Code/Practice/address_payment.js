@@ -49,5 +49,22 @@ function continuetoprint(){
   var tpricewithout = document.getElementById('pricewithoutlogin').value;
   var titemswithout = document.getElementById('itemswithoutlogin').value;
 
+  var fnamewithout = document.getElementById('fname').value;
+  var emailwithout = document.getElementById('email').value;
+  var phonewithout = document.getElementById('phoneno1').value;
+  var districtwithout = document.getElementById('dist').value;
+  var addresswithout = document.getElementById('adr').value;
+
+      localStorage.setItem("trxid1", trxid);
+      localStorage.setItem("tpricewithout1", tpricewithout);
+      localStorage.setItem("titemswithout1", titemswithout);
+
+      localStorage.setItem("fnamewithout", fnamewithout);
+      localStorage.setItem("emailwithout", emailwithout);
+      localStorage.setItem("phonewithout", phonewithout);
+      localStorage.setItem("districtwithout", districtwithout);
+      localStorage.setItem("addresswithout", addresswithout);
+      return false;
+
 }
 
