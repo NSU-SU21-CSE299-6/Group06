@@ -1,36 +1,38 @@
-*{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	text-decoration: none;
-	font-family: Century Gothic;
+
+@viewport{
+  zoom:  1.0;
+  width:  extend-to-zoom;
 }
-header{
-	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(homepage_banner.png);
-	height: 50vh;
-	background-size: cover;
-	background-position: center;
+@-ms-viewport{
+  width:  extend-to-zoom;
+  zoom: 1.0;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
 }
 body{
-    font-family: Century Gothic;
-    overflow: hidden;
-    user-select: none;
+  font-family: sans-serif;
+  overflow: hidden;
+  user-select: none;
 }
 nav .logo{
-  color: white;
-  font-size: 33px;
-  font-weight: bold;
-  line-height: 70px;
-  padding-left: 70px;
+  line-height: 10px;
+  padding-left: 100px;
 }
 nav{
-  height: 70px;
-  background: #063247;
+  height: 60px;
+  background: #fff;
   box-shadow: 0 3px 15px rgba(0,0,0,.4);
 }
 nav ul{
   float: right;
-  margin-right: 80px;
+  margin-right: 70px;
 }
 nav ul li{
   display: inline-block;
@@ -38,8 +40,9 @@ nav ul li{
 nav ul li a{
   color: white;
   display: block;
-  padding: 0 20px;
-  line-height: 40px;
+  padding: 0 25px;
+  margin-top: 5px;
+  line-height: 50px;
   font-size: 20px;
   background: #063247;
   transition: .5s;
@@ -56,13 +59,13 @@ nav ul ul{
   visibility: hidden;
 }
 nav ul li:hover > ul{
-  top: 70px;
+  top: 50px;
   opacity: 1;
   visibility: visible;
   transition: .3s linear;
 }
 nav ul ul li{
-  width: 150px;
+  width: 165px;
   display: list-item;
   position: relative;
   border: 1px solid #042331;
@@ -83,59 +86,52 @@ nav ul ul li a i{
   margin-left: 45px;
 }
 section{
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(homepage_banner.png);
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 50vh;
 }
-.main{
-	max-width: 1200px;
-	margin: auto;
-}
-.title{
-	width: 100%;
-	position: absolute;
-	top: 30%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	text-align: center;
-	color: #FFF;
 
-}
+.title{
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  color: #FFF;
+  }
 .title h1{
-	font-size: 50px;
-	margin-top: 10px;
+  font-size: 50px;
+  margin-top: 10px;
 } 
 
 .title p{
-	font-size: 20px;
-	margin: 20px auto;
-	font-weight: 100;
-	line-height: 25px ;
-	color: #FFF;
+  font-size: 20px;
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px ;
+  color: #FFF;
 
 }
+
 .searchBar{
-	position:absolute;
-	top:40%;
-	left:50%;
-	transform: translate(-50%,-50%);
+  position:absolute;
+  top:40%;
+  left:50%;
+  transform: translate(-50%,-50%);
 
 }
 input{
-	border:3px solid #32e17c;
-	height: 45px;
-	width: 350px;
-	padding: 0px 10px;
-	cursor: pointer;
+  border:3px solid #32e17c;
+  height: 40px;
+  width: 300px;
+  padding: 0px 10px;
+  cursor: pointer;
 }
-.location{
-	position:absolute;
-	top:50%;
-	left:55%;
-	transform: translate(-50%,-50%);
-
+.btn{
+  margin-left: 500px;
 }
-
 .btnAc{
   position:absolute;
   top:50%;
@@ -173,3 +169,263 @@ input{
   transform: translate(-50%,-50%);
 
 }
+.banner{
+  position:absolute;
+  top:85%;
+  left:48%;
+  transform: translate(-50%,-50%);
+
+}
+
+.title2 h1{
+  margin-left: 500px;
+  font-size: 30px;
+  margin-top: 10px;
+  color: black;
+
+}
+.container2{
+  margin-left: 500px;
+
+}
+.col2 {
+  width: 70px;
+  height: 40px;
+  background-color: white;
+  float: left;
+  border: 1px solid black;
+  padding: 60px;
+  margin: 15px;
+}
+
+.title3 h1{
+  margin-top: 2500px;
+  margin-bottom:10px;
+  font-size: 15px;
+  margin-top: 10px;
+  color: black;
+  text-align: center;
+
+
+}
+.title3 p{
+  font-size: 30px;
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px ;
+  color: black;
+  text-align: center;
+
+}
+.container3{
+  margin-top: 300px;
+  margin-left: 500px;
+
+}
+.col3 {
+  width: 70px;
+  height: 40px;
+  background-color: white;
+  float: left;
+  border: 1px solid black;
+  padding: 60px;
+  margin: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#copyright {
+  min-height: 40px;
+  font-family: monospace;
+  font-size: 17px;
+  padding-top: 12px;
+  background-color: #d5d5d5;
+  background-size: cover;
+}
+
+
+
+
+.footer{
+  margin-top: 10px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background: black;
+  background-size: cover;
+}
+
+.footer-content{
+  display: flex;
+  background-color: #474747;
+  margin-left: 0.85%;
+  margin-right: 0.85%;
+
+}
+
+.footer-content .box{
+  flex-basis: 50%;
+  padding: 25px 20px;
+  font-family: serif;
+  margin-bottom: -1%;
+
+}
+
+.box h2{
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+}
+
+.box .content{
+  margin: 20px 0 0 0;
+}
+
+.box .content p{
+  text-align: justify;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: white;
+  line-height: 1.15;
+}
+
+
+.left .content .social{
+  margin: 20px 0 0 0;
+}
+
+
+.left .content .social a{
+  padding: 0 2px;
+  color: black;
+
+}
+
+.left .content .social a span{
+  height: 40px;
+  width: 40px;
+  background: white;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.left .content .social a:hover{
+  color: white;
+
+}
+
+.left .content .social a span:hover{
+
+  background: black;
+
+}
+
+.center .content .fas{
+  font-size: 1.4375rem;
+  height: 45px;
+  width: 45px;
+  color: white;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.center .content .text{
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-left: 10px;
+  color: white;
+}
+
+.right .content .text{
+  color: white;
+  font-size: 1.2rem;
+}
+
+.right form .msg{
+  margin-top: 15px;
+}
+
+.right form input, .right form textarea{
+  width: 100%;
+  font-size: 1.0625rem;
+  background:  #474747;
+  padding-left: 10px;
+  border: 1px solid white;
+}
+
+.right form input:focus, .right form textarea: focus{
+  outline-color: #3498db;
+}
+
+.right form input{
+  height: 35px;
+  color: white;
+}
+
+.right form textarea{
+  color: white;
+}
+
+.right form .btnsubmit{
+  margin-top: 8px;
+}
+.right form .btnsubmit button{
+  height: 40px;
+  width: 425px;
+  border: 2px solid black;
+  outline: none;
+  background: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+
+
+.right form .btnsubmit button:hover{
+  background: #000;
+  color: white;
+}
+
+
+
+
+#header, #query, #bodylogo, #content, #copyright {
+  margin-left: 0.85%;
+  margin-right: 0.85%;
+
+  box-shadow: 3px 5px 7px #666666;
+  border: px solid black;
+}
+
+#header{
+  margin-top: 0.55%;
+}
+
