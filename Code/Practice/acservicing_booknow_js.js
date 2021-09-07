@@ -148,7 +148,7 @@ function calculate(){
 
 
         if (confirm('Are you sure you have added all the items you need?')) {
-        document.getElementById("checkoutbtn").style.visibility = 'hidden';
+        document.getElementById("checkoutbtn").style.display = 'none';
         document.getElementById("acbasictotalbtn").style.visibility = 'hidden';
         document.getElementById("acmastertotalbtn").style.visibility = 'hidden';
         document.getElementById("acwatertotalbtn").style.visibility = 'hidden';
