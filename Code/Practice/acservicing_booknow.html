@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="acservicing_booknow_css.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
 	<script src="https://kit.fontawesome.com/0871cdca69.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -317,7 +318,7 @@ function Ready(){
 
       document.getElementById('checktopassfirebase').onclick = function(){
         Ready();
-        firebase.database().ref('Payment_details/'+'TrxID: '+trxidV).set({
+        firebase.database().ref('Payment_details/'+'TrxID: ' +trxidV).set({
           Total_price:priceV,
           Total_items:itemsV,
           TrxID:trxidV
@@ -339,12 +340,12 @@ function Ready(){
 	function paymenttrxid(){
 			var transferprice = document.getElementById("transferprice").value;
 			localStorage.setItem("valuetxt",transferprice);
+			localStorage.setItem("valuetxtlogin",transferprice);
 
 			var transferitems = document.getElementById("transferitems").value;
 			localStorage.setItem("valuetxt1",transferitems);
+			localStorage.setItem("valuetxtlogin1",transferitems);
 
-			var transfertrxid = document.getElementById("trxid").value;
-			localStorage.setItem("valuetxt2",transfertrxid);
 	}
 </script>
 

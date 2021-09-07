@@ -52,8 +52,16 @@ h2{
     box-shadow: 0 0 2rem 0 rgba(168, 180, 194, 0.37);
 }
 
+.containerlogin {
+    background-color: #FFFFFF;
+    padding: 3px 18px 13px 18px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    box-shadow: 0 0 2rem 0 rgba(168, 180, 194, 0.37);
+}
 
-#pricewithoutlogin, #itemswithoutlogin, #trxidwithoutlogin {
+
+#pricewithoutlogin, #itemswithoutlogin, #trxidwithoutlogin, #pricewithlogin, #itemswithlogin, #trxidwithlogin {
     width: 60%;
     padding: 12px;
     margin-top: -10px;
@@ -62,7 +70,7 @@ h2{
     border-radius: 1px;
 }
 
-#fname, #email, #phoneno1, #dist, #adr {
+#fname, #email, #phoneno1, #dist, #adr, #emaillogin, #passwordlogin {
     width: 100%;
     margin-bottom: 20px;
     padding: 12px;
