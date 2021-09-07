@@ -1,0 +1,117 @@
+@viewport{
+	zoom:  1.0;
+	width:  extend-to-zoom;
+}
+@-ms-viewport{
+	width:  extend-to-zoom;
+	zoom: 1.0;
+}
+
+
+#div1{
+	width: 800px;
+	height: 1000px;
+	border: 1px solid darkred;
+	margin: 0 auto;
+	border-radius: 15px;
+}
+
+.header{
+	width: 297px;
+	height: 5px;
+	background-color: ;
+	float: left;
+	padding: 40px;
+	margin: 10px;
+}
+
+#logo{
+	width: 270px;
+	margin-top: -15px;
+	margin-left: -40px;
+}
+
+#invoice{
+	margin-top: 10px;
+	text-align: right;
+	margin-right: -20px;
+	font-family: 'Chakra Petch', sans-serif;
+	font-weight: bolder;
+}
+
+.header2{
+	width: 297px;
+	height: 5px;
+	background-color:;
+	float: left;
+	padding: 40px;
+	margin: 10px;
+}
+
+
+.col1{
+	width: 400px;
+	height: 110px;
+	background-color:;
+	float: left;
+	//border: 1px solid black;
+	padding: 40px;
+	margin: 10px;
+}
+
+.col2{
+	width: 188px;
+	height: 110px;
+	background-color:;
+	float: left;
+	//border: 1px solid black;
+	padding: 40px;
+	margin: 10px;
+}
+
+#invoiceto{
+	margin-left: -25px;
+	margin-top: -40px;
+	font-family: Ubuntu;
+}
+
+.invoicetotext{
+	border: none;
+	margin-left: -25px;
+	margin-top: -40px;
+	width: 350px;
+	height: 30px;
+	font-family: Ubuntu;
+	font-weight: bolder;
+}
+
+#invoicefrom{
+	text-align: right;
+	margin-right: -30px;
+	margin-top: -40px;
+	font-family: Ubuntu;
+}
+
+.invoicetotext1{
+	border: none;
+	margin-left: -15px;
+	margin-top: -40px;
+	width: 230px;
+	height: 30px;
+	font-family: Ubuntu;
+	font-weight: bolder;
+	text-align: right;
+}
+
+#ordernodata{
+	font-family: Ubuntu;
+	text-align: center;
+}
+
+#orderno{
+	font-family: Ubuntu;
+	font-weight: bolder;
+	font-size: 20px;
+	width: 90px;
+	border: none;
+}
