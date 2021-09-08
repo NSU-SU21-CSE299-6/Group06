@@ -131,49 +131,62 @@ input{
 }
 .btn{
   margin-left: 500px;
+  background-color: white;
 }
 .btnAc{
   position:absolute;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
   top:50%;
-  left:30%;
+  left:28.5%;
   transform: translate(-50%,-50%);
+  border:3px solid #32e17c;
 
 }
 
 .btnPlumbing{
   position:absolute;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
   top:50%;
   left:38%;
   transform: translate(-50%,-50%);
+  border:3px solid #32e17c;
 
 }
 
 .btnAppliance{
   position:absolute;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
   top:50%;
-  left:48%;
+  left:47%;
   transform: translate(-50%,-50%);
+  border:3px solid #32e17c;
 
 }
 .btnPaint{
   position:absolute;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
   top:50%;
-  left:60%;
+  left:56.5%;
   transform: translate(-50%,-50%);
-
+  border:3px solid #32e17c;
 }
 .btnClean{
   position:absolute;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
   top:50%;
-  left:70%;
+  left:67.5%;
   transform: translate(-50%,-50%);
-
-}
-.banner{
-  position:absolute;
-  top:85%;
-  left:48%;
-  transform: translate(-50%,-50%);
+  border:3px solid #32e17c;
 
 }
 
@@ -189,22 +202,23 @@ input{
 
 }
 .col2 {
-  width: 70px;
-  height: 40px;
+  width: 80px;
+  height: 60px;
   background-color: white;
   float: left;
-  border: 1px solid black;
+  font-size: 18px;
+  font-weight: bold;
+  border: 3px solid black;
   padding: 60px;
   margin: 15px;
 }
 
 .title3 h1{
-  margin-top: 2500px;
-  margin-bottom:10px;
+  margin-top: 400px;
+  margin-left: 500px;
   font-size: 15px;
   margin-top: 10px;
   color: black;
-  text-align: center;
 
 
 }
@@ -213,8 +227,7 @@ input{
   margin: 20px auto;
   font-weight: 100;
   line-height: 25px ;
-  color: black;
-  text-align: center;
+  
 
 }
 .container3{
@@ -223,11 +236,16 @@ input{
 
 }
 .col3 {
-  width: 70px;
-  height: 40px;
+  width: 80px;
+  height: 60px;
   background-color: white;
   float: left;
-  border: 1px solid black;
+  font-size: 18px;
+  font-weight: bold;
+  border: 3px solid;
+  text-align: center;
+  text-underline-position:left;
+  border-color: #fff;
   padding: 60px;
   margin: 15px;
 }
@@ -269,7 +287,7 @@ input{
 
 
 .footer{
-  margin-top: 10px;
+  margin-top: 50px;
   position: absolute;
   bottom: 0px;
   width: 100%;
@@ -286,7 +304,7 @@ input{
 }
 
 .footer-content .box{
-  flex-basis: 50%;
+  flex-basis: 70%;
   padding: 25px 20px;
   font-family: serif;
   margin-bottom: -1%;
