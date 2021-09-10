@@ -29,7 +29,7 @@
 	</div>
 
 	<div id="bodylogo">
-		<img src="plumbing-service-center-banner.jpg" id="plumbingservicelogo">
+		<img src="painting-service-center-banner.jpg" id="plumbingservicelogo">
 	</div>
 
 	<div id="query">
@@ -39,9 +39,9 @@
 
 	<div id="nav_bar">
 		<ul>
-			<li><a href="plumbing_details.html">Details</a></li>
-			<li><a href="plumbing_review.html" id="onlink">Review</a></li>
-			<li><a href="plumbing_booknow.html">Book now</a></li>
+			<li><a href="painting_details.html">Details</a></li>
+			<li><a href="painting_review.html" id="onlink">Review</a></li>
+			<li><a href="painting_booknow.html">Book now</a></li>
 		</ul>
 	</div>
 
@@ -93,7 +93,7 @@
 
 
 function SelectAllData(){
-	firebase.database().ref('Plumbing Review').once('value',
+	firebase.database().ref('Painting Review').once('value',
 		function(AllRecords){
 			AllRecords.forEach(
 				function(CurrentRecord){
