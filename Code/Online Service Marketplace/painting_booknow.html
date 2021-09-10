@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Plumbing service booking</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Courgette&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Della+Respira&family=Eczar:wght@400;500;600&family=Lobster&family=Merienda&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;1,400&family=Niconne&family=Pacifico&family=Ubuntu:wght@300&family=Uchen&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="painting_booknow_css.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+	<script src="https://kit.fontawesome.com/0871cdca69.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+
+	<div id="header">
+		<img src="logo.png" id="logo">
+	</div>
+
+	<div id="bodylogo">
+		<img src="painting-service-center-banner.jpg" id="acservicelogo">
+	</div>
+
+	<div id="query">
+		<h1 style="color:whitesmoke; display: inline;" id="queryline" >If you have any query, contuct us: </h1>
+			<button id="phoneno" style="display: inline;">+880 1711 222 111</button>
+	</div>
+
+	<div id="nav_bar">
+		<ul>
+			<li><a href="painting_details.html" >Details</a></li>
+			<li><a href="painting_review.html">Review</a></li>
+			<li><a href="painting_booknow.html" id="onlink">Book now</a></li>
+		</ul>
+	</div>
+
+
+
+
+	<div class="main_container">
+		<div class="container">
+			<div class="cart">
+
+							
+
+								<div class="products">
+									<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+				            <div class="product">
+					              <img src="paintingbasicservice.jpg">
+				            	<div class="product-info">
+						            <input class="product-name" name="acbasic" id="acbasic" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" size="40px" value="Interior Paint (3 room & others)" readonly>
+
+						            <div class="productprice">
+						              <h2 class="product-price" style="display: inline;">৳</h2>
+					             	  <h2 class="product-price" style="display: inline;">4000</h2>
+					             	  <input  type="hidden" id="acbasictotal" value="0" readonly>
+						            </div>
+
+						            
+						            <p class="product-quantity">Qnt: <input value="0" name="qnt" id="qnt" onkeyup="mult(this.value);">
+                           <div  class="form-action-buttons">
+                           <button class="product-remove" id="acbasictotalbtn" type="submit" onclick="showAlert()" disabled>ADD</button>
+                           </div>
+				        	    </div>
+			     	        </div>
+			     	      </form>
+
+			     	      <form onsubmit="event.preventDefault();onFormSubmit1();" autocomplete="off">
+			     	        <div class="product">
+					              <img src="paintingbasicservice.jpg">
+				            	<div class="product-info">
+						            <input class="product-name" name="acmaster" id="acmaster" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" size="40px" value="Exterior Paint (1 floor without materials) " readonly>
+					             	<div class="productprice">
+						              <h2 class="product-price" style="display: inline;">৳</h2>
+					             	  <h2 class="product-price" style="display: inline;">5000</h2>
+					             	  <input  type="hidden" id="acmastertotal" value="0" readonly>
+						            </div>
+						            <p class="product-quantity">Qnt: <input value="0" name="qnt1" id="qnt1" onkeyup="mult1(this.value);">
+                           <div  class="form-action-buttons">
+                           <button class="product-remove" id="acmastertotalbtn" type="submit" disabled>ADD</button>
+                           </div>
+				        	    </div>
+			     	        </div>
+			     	      </form>
+
+			     	      <form onsubmit="event.preventDefault();onFormSubmit2();" autocomplete="off">
+			     	        <div class="product">
+					              <img src="paintingbasicservice.jpg">
+				            	<div class="product-info">
+						            <input class="product-name" name="acwater" id="acwater" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" value="Damp Repair Solution" readonly>
+					             	<div class="productprice">
+						              <h2 class="product-price" style="display: inline;">৳</h2>
+					             	  <h2 class="product-price" style="display: inline;">6700</h2>
+					             	  <input  type="hidden" id="acwatertotal" value="0" readonly>
+						            </div>
+						            <p class="product-quantity">Qnt: <input value="0" name="qnt2" id="qnt2" onkeyup="mult2(this.value);">
+                           <div  class="form-action-buttons">
+                           <button class="product-remove" id="acwatertotalbtn" type="submit" disabled>ADD</button>
+                           </div>
+				        	    </div>
+			     	        </div>
+			     	      </form>
+
+			     	      <form onsubmit="event.preventDefault();onFormSubmit3();" autocomplete="off">
+			     	        <div class="product">
+					              <img src="paintingbasicservice.jpg">
+				            	<div class="product-info">
+						            <input class="product-name" name="acjet" id="acjet" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" size="40px" value="Wood & Furniture Paint (1 product)" readonly>
+					             	<div class="productprice">
+						              <h2 class="product-price" style="display: inline;">৳</h2>
+					             	  <h2 class="product-price" style="display: inline;">1000</h2>
+					             	  <input  type="hidden" id="acjettotal" value="0" readonly>
+						            </div>
+						            <p class="product-quantity">Qnt: <input value="0" name="qnt3" id="qnt3" onkeyup="mult3(this.value);">
+                           <div  class="form-action-buttons">
+                           <button class="product-remove" id="acjettotalbtn" type="submit" disabled>ADD</button>
+                           </div>
+				        	    </div>
+			     	        </div>
+			     	      </form>
+
+
+
+
+		           </div>
+
+<!-- Product complete...........................-->
+							<div class="cart-total">
+															 <table class="list" id="employeeList">
+                               <thead>
+                                  <tr>
+                                   <th>Items</th>
+                                   <th>Quentity</th>
+                                   <th>Total price</th>
+                                   <th>Remove</th>
+                                  </tr>
+                              </thead>
+                             <tbody>
+
+                             </tbody>
+                          </table>
+
+<button style="margin-top: 20px;" id="checkoutbtn" onclick="calculate()">CALCULATE TOTAL PRICE</button>
+                              <p>
+					                <span id="totalpricename" style="visibility: hidden ;">Total price</span>
+					                
+					                <input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none; visibility: hidden ;"  type="" id="pricetotal" value="0" readonly>
+			                  	</p>
+			                   	<p>
+					               <span id="totalitems" style="visibility: hidden ;">Number of items</span>
+				                 	<input style="text-align: right; font-family: 'Chakra Petch', sans-serif; font-weight: bold; font-size: 20px; border: none;  visibility: hidden ;"  type="" id="itemstotal" value="0" readonly>
+				                  </p>
+				                  
+				                  <input id="checktopassfirebase" style="visibility: hidden;" type="checkbox" onclick="enableddl(this)"> 
+				                  <p10 id="termsandconditions" style="display: inline; visibility: hidden;">I read the </p10>
+				                  <a style="display: inline; visibility: hidden;" id="termslink" onclick="showDialog()">terms and conditions</a>
+				                  <p10 id="termsandconditions1" style="display: inline; visibility: hidden;">and I accept it </p10>
+
+
+
+												<form action="address_payment.html">
+													<button id="btncheckout" style="visibility: hidden ;" onclick="paymenttrxid()" disabled="disabled">PROCEED TO CHECKOUT</button>
+													<input id="transferprice" placeholder="transferprice" style="visibility: hidden;" value="">
+													<input id="transferitems" placeholder="transferitems" style="visibility: hidden;" value="">
+				                  <input style="visibility: hidden;" id="trxid" type="text" readonly>
+												</form>
+										
+				                 
+							</div>
+
+
+			
+		</div>
+		</div>
+		
+		
+
+	</div>
+
+
+        <div id="white-background">
+        </div>
+        <div id="dlgbox">
+            <div id="dlg-header">Terms & Conditions</div>
+
+
+
+
+            <div id="dlg-body">
+            				     	<h1>Acceptance of Terms</h1>
+						<p>PLEASE READ THE TERMS OF USE THOROUGHLY AND CAREFULLY. The terms and conditions set forth below ("Terms of Use") and the Privacy Policy (as defined below) constitute a legally-binding agreement between Service.com.bd operating from its Dhaka Corporate Office and you. These Terms of Use contain provisions that define your limits, legal rights and obligations with respect to your use of and participation in (i) the Service.com.bd website and mobile application, including the classified advertisements, forums, various email functions and Internet links, and all content and Service.com.bd services available through the domain and sub-domains of Service.com.bd located at www.service.com.bd or Its Mobile Apps(collectively referred to herein as the "Product"), and (ii) the online transactions between those users of the Product who are offering services (each, a "SERVICE PROVIDER") and those users of the Product who are obtaining services (each, a "SERVICE USER") through the Product (such services, collectively, the "Services"). The Terms of Use described below incorporate the Privacy Policy and apply to all users of the Website, including users who are also contributors of video content, information, private and public messages, advertisements, and other materials or Services on the Product.<br><br>
+
+
+						YOU SPECIFICALLY AGREE THAT BY USING THE PRODUCT, YOU ARE AT LEAST 18 YEARS OF AGE AND YOU ARE COMPETENT UNDER LAW TO ENTER INTO A LEGALLY BINDING AND ENFORCEABLE CONTRACT.
+
+						All references to "you" or "your," as applicable, mean the person that accesses, uses, and/or participates in the Website in any manner.</p>
+
+						<h1>Modifications to Terms of Use and/or Privacy Policy</h1>
+						<p>Service.com.bd reserves the right, in its sole discretion, to change, modify, or otherwise amend the Terms of Use, and any other documents incorporated by reference herein for complying with legal and regulatory framework and for other legitimate business purposes, at any time, and Service.com.bd will post the amended Terms of Use at the domain of www.service.com.bd/terms-and-condition. It is your responsibility to review the Terms of Use for any changes and you are encouraged to check the Terms of Use frequently. Your use of the Product following any amendment of the Terms of Use will signify your assent to and acceptance of any revised Terms of Use. If you do not agree to abide by these or any future Terms of Use, please do not use or access the Product.</p>
+            </div>
+            <div id="dlg-footer">
+                <button onclick="dlgLogin()">Ok, I understand</button>
+            </div>
+        </div>
+
+
+
+	<footer>
+		<div class="footer-content">
+			<div class="left box">
+				<h2>About US</h2>
+				<div class="content">
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+					<div class="social">
+						<a href="https://www.facebook.com/"><span class="fab fa-facebook-f"></span></a>
+						<a href="https://www.twitter.com/"><span class="fab fa-twitter"></span></a>
+						<a href="https://www.instagram.com/"><span class="fab fa-instagram"></span></a>
+						<a href="https://www.youtube.com/"><span class="fab fa-youtube"></span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="center box">
+				<h2>Address</h2>
+				<div class="content">
+					<div class="place">
+						<span class="fas fa-map-marker-alt"></span>
+						<span class="text">Dhaka, Bangladesh</span>
+					</div>
+
+					<div class="phone">
+						<span class="fas fa-phone-alt"></span>
+						<span class="text">+880 1711 222 111</span>
+					</div>
+
+					<div class="email">
+						<span class="fas fa-envelope"></span>
+						<span class="text">query@service.com</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="right box">
+				<h2>Contact US</h2>
+				<div class="content">
+					<form action="#">
+						<div class="email">
+							<div class="text">Email *</div>
+							<input type="email" required="">
+						</div>
+						<div class="msg">
+							<div class="text">Message *</div>
+							<textarea rows="4" cols="35" required=""></textarea>
+						</div>
+						<div class="btn">
+							<button type="submit">SUBMIT</button>
+							
+						</div>
+						
+					</form>
+					
+				</div>
+				
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+	<div id="copyright">
+		<center>Copyright © 2021 Service Platform Limited | All Rights Reserved</center>
+	</div>
+
+
+
+
+
+	<script src="painting_booknow_js.js"></script>
+
+<!---------------------------------TrxID stored in firebase coding start---------------------------------->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script> 
+
+   <script id="MainScript">
+
+//---------------------------------CONFIGURATION----------------------//
+   	  var firebaseConfig = {
+		    apiKey: "AIzaSyBg9KGbdOtnlQzfg44Hdok3oQEkxY2Ve_o",
+		    authDomain: "online-service-marketplace.firebaseapp.com",
+		    databaseURL: "https://online-service-marketplace-default-rtdb.firebaseio.com",
+		    projectId: "online-service-marketplace",
+		    storageBucket: "online-service-marketplace.appspot.com",
+		    messagingSenderId: "1096386179814",
+		    appId: "1:1096386179814:web:fdc2df99098b00eae28127",
+		    measurementId: "G-CKLPS95G8H"
+		  };
+		  firebase.initializeApp(firebaseConfig);
+
+//---------------------------------READY DATA----------------------//
+
+var priceV, itemsV, trxidV;
+
+function Ready(){
+	priceV = document.getElementById('pricetotal').value;
+	itemsV = document.getElementById('itemstotal').value;
+	trxidV = document.getElementById('trxid').value;
+
+
+}
+
+
+      document.getElementById('checktopassfirebase').onclick = function(){
+        Ready();
+        firebase.database().ref('Payment_details/'+'TrxID: ' +trxidV).set({
+          Total_price:priceV,
+          Total_items:itemsV,
+          TrxID:trxidV
+        });
+
+      var ddl = document.getElementById("btncheckout");
+			ddl.disabled = checktopassfirebase.checked ? false : true ;
+			if(!ddl.disabled){
+				ddl.focus();
+			}
+
+      }
+
+   </script>
+
+<!---------------------------------TrxID stored in firebase coding end---------------------------------->
+
+<script>
+	function paymenttrxid(){
+			var transferprice = document.getElementById("transferprice").value;
+			localStorage.setItem("valuetxt",transferprice);
+			localStorage.setItem("valuetxtlogin",transferprice);
+
+			var transferitems = document.getElementById("transferitems").value;
+			localStorage.setItem("valuetxt1",transferitems);
+			localStorage.setItem("valuetxtlogin1",transferitems);
+
+	}
+</script>
+
+
+	<script>
+		const buttonacbasictotalbtn = document.getElementById("acbasictotalbtn");
+		const buttonacmastertotalbtn = document.getElementById("acmastertotalbtn");
+		const buttonacwatertotalbtn = document.getElementById("acwatertotalbtn");
+		const buttonacjettotal = document.getElementById("acjettotalbtn");
+
+
+
+
+		const inputqnt = document.getElementById("qnt");
+		const inputqnt1 = document.getElementById("qnt1");
+		const inputqnt2 = document.getElementById("qnt2");
+		const inputqnt3 = document.getElementById("qnt3");
+
+		inputqnt.addEventListener("keyup", (e) => {
+			const value = e.currentTarget.value;
+
+			if(value === "1" || value === "2" || value === "3" || value === "4" || value === "5"){
+				buttonacbasictotalbtn.disabled = false;
+			} else {
+				buttonacbasictotalbtn.disabled = true;
+
+			}
+		});
+
+
+		inputqnt1.addEventListener("keyup", (e) => {
+			const value = e.currentTarget.value;
+
+			if(value === "1" || value === "2" || value === "3" || value === "4" || value === "5"){
+				buttonacmastertotalbtn.disabled = false;
+			} else {
+				buttonacmastertotalbtn.disabled = true;
+			}
+		});
+
+		inputqnt2.addEventListener("keyup", (e) => {
+			const value = e.currentTarget.value;
+
+			if(value === "1" || value === "2" || value === "3" || value === "4" || value === "5"){
+				buttonacwatertotalbtn.disabled = false;
+			} else {
+				buttonacwatertotalbtn.disabled = true;
+			}
+		});
+
+		inputqnt3.addEventListener("keyup", (e) => {
+			const value = e.currentTarget.value;
+
+			if(value === "1" || value === "2" || value === "3" || value === "4" || value === "5"){
+				buttonacjettotal.disabled = false;
+			} else {
+				buttonacjettotal.disabled = true;
+			}
+		});
+
+
+
+
+
+		document.getElementById('trxid').value = create_random_string(7);
+		
+		function create_random_string(string_length){
+			var random_string = '';
+			var characters='ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz'
+			for(var i, i=0; i<string_length; i++){
+				random_string += characters.charAt(Math.floor(Math.random() * characters.length));
+			}
+			return random_string
+		}
+
+
+	</script>
+
+
+<!--------------------------------------------- script of dialog ------------------------------------->
+        <script>
+            function dlgLogin(){
+                var whitebg = document.getElementById("white-background");
+                var dlg = document.getElementById("dlgbox");
+                whitebg.style.display = "none";
+                dlg.style.display = "none";
+            }
+            
+            function showDialog(){
+                var whitebg = document.getElementById("white-background");
+                var dlg = document.getElementById("dlgbox");
+                whitebg.style.display = "block";
+                dlg.style.display = "block";
+                
+                var winWidth = window.innerWidth;
+                var winHeight = window.innerHeight;
+                
+                dlg.style.left = (winWidth/2) - 900/2 + "px";
+                dlg.style.top = "70px";
+            }
+        </script>
+
+</body>
+</html>
