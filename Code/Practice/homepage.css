@@ -24,7 +24,44 @@ nav ul li{
   display: inline-block;
   margin-right: 20px;
 }
+
+nav ul li a{
+  color: white;
+  display: block;
+  padding: 0 25px;
+  margin-top: 5px;
+  line-height: 50px;
+  font-size: 20px;
+  background: #063247;
+  transition: .5s;
+}
+nav ul li a:hover,
+nav ul li a.active{
+ color: #23dbdb;
+}
+nav ul ul{
+  position: absolute;
+  top: 85px;
+  //border-top: 3px solid #23dbdb;
+  opacity: 0;
+  visibility: hidden;
+}
+nav ul li:hover > ul{
+  top: 50px;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s linear;
+}
+nav ul ul li{
+  width: 172px;
+  display: list-item;
+  position: relative;
+  //border: 1px solid #042331;
+  border-top: none;
+}
+
 a{
+
   text-decoration: none;
   color: #555;
   font-weight: bold;
@@ -33,6 +70,18 @@ a{
 p{
   color: #555;
 }
+
+#dropdrop{
+  padding-top: 30px;
+  margin-left: -172px;
+  text-align: center;
+}
+
+#dropdrop1{
+  margin-left: -172px;
+  text-align: center;
+}
+
 #background{
   background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(homepage_banner.png);
   background-position: center;
@@ -154,6 +203,34 @@ border-radius: 15px;
 }
 
 
+.Ourservice{
+ width: 1100px;
+ height: 360px;
+ margin: 0 auto;
+ background-color: white;
+ margin-top: 75px;
+ border-radius: 15px;
+}
+
+.col32{
+  width: 170px;
+  height: 170px;
+  float: left;
+  padding: 40px;
+  margin: 12px;
+  margin-top: -2px;
+}
+
+
+.nowservice{
+  height: 250px;
+  width: 250px;
+  margin-top: -40px;
+  margin-left: -40px;
+  border-radius: 20px;
+}
+
+
 .upcomingservice{
 width: 1100px;
 height: 360px;
@@ -164,7 +241,7 @@ border-radius: 15px;
 }
 
 
-.col32{
+.col33{
   width: 170px;
   height: 170px;
   float: left;
@@ -181,8 +258,6 @@ border-radius: 15px;
   margin-left: -40px;
   border-radius: 20px;
 }
-
-
 
 
 
