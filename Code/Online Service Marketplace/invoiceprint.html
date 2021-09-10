@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Invoice</title>
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Courgette&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Della+Respira&family=Eczar:wght@400;500;600&family=Lobster&family=Merienda&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;1,400&family=Niconne&family=Pacifico&family=Ubuntu:wght@300&family=Uchen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="acservicing_booknow_css.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/0871cdca69.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="invoiceprint.css">
+</head>
+
+<body>
+  <div id="div1">
+
+    <div class="headerdesing">
+      <div class="header">
+    <img src="logo.png" id="logo">
+      </div>
+
+      <div class="header2">
+    <h2 id="invoice">INVOICE</h2>
+      </div>
+    </div>
+
+    <hr size="2" width="95%" color="gray"> 
+    
+
+    <div class="details">
+      <div class="col1">
+        <h2 id="invoiceto">Invoiced To</h2>
+        <input class="invoicetotext" type="text" id="fullname" readonly>
+        <input class="invoicetotext" type="text" id="emailfull" readonly>
+        <input class="invoicetotext" type="text" id="phonefull" readonly>
+        <input class="invoicetotext" type="text" id="districtfull" readonly>
+        <input class="invoicetotext" type="text" id="addressfull" readonly>
+      </div>
+
+        <div class="col2">
+        <h2 id="invoicefrom">Invoiced From</h2>
+        <input class="invoicetotext1" type="text" id="fullname" value="Service.com.bd" readonly>
+        <input class="invoicetotext1" type="text" id="emailfull" value="query@service.com.bd" readonly>
+        <input class="invoicetotext1" type="text" id="phonefull" value="0 1711222111" readonly>
+        <input class="invoicetotext1" type="text" id="districtfull" value="Dhaka" readonly>
+        <input class="invoicetotext1" type="text" id="addressfull" value="137 South Gulshan Avenue, Gulshan" readonly>
+      </div>
+    </div>
+
+
+ <hr size="2" width="95%" color="gray"> 
+    <div id="ordernodata">
+      <h2 style="display: inline;" id="">Order no:</h2>
+      <input type="text" id="orderno" style="display: inline;" readonly>
+    </div>
+    <hr size="2" width="95%" color="gray"> 
+
+    <table id="tabletr" border="2" width="95%">
+      <thead>
+        <tr>
+          <th>Item Qty</th>
+          <th>Total Price</th>
+          <th>TrxID</th>
+          <th>Paid By</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input class="tabledata" type="text" id="totalitems" placeholder="totalitems" readonly></td>
+          <td><input class="tabledata" type="text" id="totalprice" placeholder="totalprice" readonly><input class="tabledatataka" type="text" value="BDT" readonly></td>
+          <td><input class="tabledata" type="text" id="trxid" placeholder="trxid" readonly></td>
+          <td><img src="spay.png" id="spaylogo"></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+    <div class="paidandsigneture">
+      <div class="paid">
+        <img src="paid.png" id="paidlogo">
+      </div>
+
+        <div class="signature">
+        	<div class="sigimage">
+        		<img src="signature.png" id="siglogo">
+        	</div>
+        	<hr size="2" width="95%" color="gray">
+        	<div class="sigtext">
+        		<h3>DIRECTOR</h3>
+        	</div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+</body>
+
+
+
+<button id="printinvoice" onclick="window.print()">DOWNLOAD</button>
+<button id="pushbutton" onclick="">PUSH</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---------------------------------TrxID stored in firebase coding start---------------------------------->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script> 
+
+   <script id="MainScript">
+
+//---------------------------------CONFIGURATION----------------------//
+      var firebaseConfig = {
+        apiKey: "AIzaSyBg9KGbdOtnlQzfg44Hdok3oQEkxY2Ve_o",
+        authDomain: "online-service-marketplace.firebaseapp.com",
+        databaseURL: "https://online-service-marketplace-default-rtdb.firebaseio.com",
+        projectId: "online-service-marketplace",
+        storageBucket: "online-service-marketplace.appspot.com",
+        messagingSenderId: "1096386179814",
+        appId: "1:1096386179814:web:fdc2df99098b00eae28127",
+        measurementId: "G-CKLPS95G8H"
+      };
+      firebase.initializeApp(firebaseConfig);
+//---------------------------------READY DATA----------------------//
+
+var fullnamefinal, emailfinal, phonefinal, districtfinal, addressfinal, itemsfinal, pricefinal, trxidfinal, ordernofinal
+
+function Ready1(){
+ fullnamefinal = document.getElementById('fullname').value;
+ emailfinal = document.getElementById('emailfull').value;
+ phonefinal = document.getElementById('phonefull').value;
+  districtfinal = document.getElementById('districtfull').value;
+  addressfinal = document.getElementById('addressfull').value;
+  itemsfinal = document.getElementById('totalitems').value;
+  pricefinal = document.getElementById('totalprice').value;
+  trxidfinal = document.getElementById('trxid').value;
+  ordernofinal = document.getElementById('orderno').value;
+
+}
+
+
+
+      document.getElementById('pushbutton').onclick = function(){
+        Ready1();
+        firebase.database().ref('Finaldetails/'+ 'TrxID: '+ trxidfinal).set({
+          Full_name:fullnamefinal,
+          Email:emailfinal,
+          Phone:phonefinal,
+          District:districtfinal,
+          Address:addressfinal,
+          Items_Qty:itemsfinal,
+          Total_price:pricefinal,
+          TrxID:trxidfinal,
+          Order_no:ordernofinal
+        });
+
+      }
+
+   </script>
+
+<!---------------------------------TrxID stored in firebase coding end---------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	document.getElementById('trxid').value = localStorage.getItem("trxid1");
+	document.getElementById('totalprice').value = localStorage.getItem("tpricewithout1");
+	document.getElementById('totalitems').value = localStorage.getItem("titemswithout1");
+
+	document.getElementById('fullname').value = localStorage.getItem("fnamewithout");
+	document.getElementById('emailfull').value = localStorage.getItem("emailwithout");
+	document.getElementById('phonefull').value = localStorage.getItem("phonewithout");
+	document.getElementById('districtfull').value = localStorage.getItem("districtwithout");
+	document.getElementById('addressfull').value = localStorage.getItem("addresswithout");
+</script>
+
+<script>
+  document.getElementById('orderno').value = create_random_string(6);
+    
+    function create_random_string(string_length){
+      var random_string = '#';
+      var characters='1234567890'
+      for(var i, i=0; i<string_length; i++){
+        random_string += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      return random_string
+    }
+</script>
+</html>
