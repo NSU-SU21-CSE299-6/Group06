@@ -54,6 +54,14 @@ var firebaseConfig = {
 
 
         alert('User created')
+        
+        //document.location.href="homepage.html";
+        
+        
+
+
+
+        
     })
     .catch(function(error){
         var error_code = error.code
