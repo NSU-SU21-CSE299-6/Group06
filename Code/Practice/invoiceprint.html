@@ -105,6 +105,66 @@
 
 
 <button id="printinvoice" onclick="window.print()">DOWNLOAD</button>
+<button id="pushbutton" onclick="">PUSH</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---------------------------------TrxID stored in firebase coding start---------------------------------->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script> 
+
+   <script id="MainScript">
+
+//---------------------------------CONFIGURATION----------------------//
+      var firebaseConfig = {
+        apiKey: "AIzaSyBg9KGbdOtnlQzfg44Hdok3oQEkxY2Ve_o",
+        authDomain: "online-service-marketplace.firebaseapp.com",
+        databaseURL: "https://online-service-marketplace-default-rtdb.firebaseio.com",
+        projectId: "online-service-marketplace",
+        storageBucket: "online-service-marketplace.appspot.com",
+        messagingSenderId: "1096386179814",
+        appId: "1:1096386179814:web:fdc2df99098b00eae28127",
+        measurementId: "G-CKLPS95G8H"
+      };
+      firebase.initializeApp(firebaseConfig);
+//---------------------------------READY DATA----------------------//
+
+var fullnamefinal, emailfinal
+
+function Ready1(){
+ fullnamefinal = document.getElementById('fullname').value;
+ emailfinal = document.getElementById('emailfull').value;
+
+}
+
+
+      document.getElementById('pushbutton').onclick = function(){
+        Ready1();
+        firebase.database().ref('Finaldetails/' + fullnamefinal).set({
+          Full_name:fullnamefinal,
+          Email11111:emailfinal
+        });
+
+      }
+
+   </script>
+
+<!---------------------------------TrxID stored in firebase coding end---------------------------------->
+
+
 
 
 
@@ -139,7 +199,7 @@
   document.getElementById('orderno').value = create_random_string(6);
     
     function create_random_string(string_length){
-      var random_string = '#';
+      var random_string = '';
       var characters='1234567890'
       for(var i, i=0; i<string_length; i++){
         random_string += characters.charAt(Math.floor(Math.random() * characters.length));
