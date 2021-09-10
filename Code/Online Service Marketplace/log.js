@@ -46,6 +46,7 @@ function login () {
 
     // DOne
     alert('User Logged In!!')
+    window.location.replace("homepage.html");
 
   })
   .catch(function(error) {
