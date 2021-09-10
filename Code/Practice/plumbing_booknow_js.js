@@ -103,25 +103,25 @@ function onDelete(td){
 
 function mult(value){
     var x;
-    x=1000 * value;
+    x=700 * value;
     document.getElementById('acbasictotal').value = x;
 }
 
 function mult1(value){
     var y;
-    y=2000 * value;
+    y=400 * value;
     document.getElementById('acmastertotal').value = y;
 }
 
 function mult2(value){
     var z;
-    z=1100 * value;
+    z=300 * value;
     document.getElementById('acwatertotal').value = z;
 }
 
 function mult3(value){
     var a;
-    a=2100 * value;
+    a=200 * value;
     document.getElementById('acjettotal').value = a;
 }
 
