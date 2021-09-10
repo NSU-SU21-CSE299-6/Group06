@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Plumbing service booking</title>
+	<title>Electrical service booking</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Courgette&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Della+Respira&family=Eczar:wght@400;500;600&family=Lobster&family=Merienda&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;1,400&family=Niconne&family=Pacifico&family=Ubuntu:wght@300&family=Uchen&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="plumbing_booknow_css.css">
+	<link rel="stylesheet" type="text/css" href="electrical_booknow_css.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
 	<script src="https://kit.fontawesome.com/0871cdca69.js" crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -20,7 +20,7 @@
 	</div>
 
 	<div id="bodylogo">
-		<img src="plumbing-service-center-banner.jpg" id="acservicelogo">
+		<img src="electrical-service-center-banner.jpg" id="acservicelogo">
 	</div>
 
 	<div id="query">
@@ -30,9 +30,9 @@
 
 	<div id="nav_bar">
 		<ul>
-			<li><a href="plumbing_details.html" >Details</a></li>
-			<li><a href="plumbing_review.html">Review</a></li>
-			<li><a href="plumbing_booknow.html" id="onlink">Book now</a></li>
+			<li><a href="electrical_details.html" >Details</a></li>
+			<li><a href="electrical_review.html">Review</a></li>
+			<li><a href="electrical_booknow.html" id="onlink">Book now</a></li>
 		</ul>
 	</div>
 
@@ -48,13 +48,13 @@
 								<div class="products">
 									<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
 				            <div class="product">
-					              <img src="plumbingbasicservice.jpg">
+					              <img src="electricalbasicservice.jpg">
 				            	<div class="product-info">
-						            <input class="product-name" name="acbasic" id="acbasic" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" size="40px" value="Water Meter Servicing & Installation" readonly>
+						            <input class="product-name" name="acbasic" id="acbasic" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" size="40px" value="Ceiling Fan Services & Installation" readonly>
 
 						            <div class="productprice">
 						              <h2 class="product-price" style="display: inline;">৳</h2>
-					             	  <h2 class="product-price" style="display: inline;">700</h2>
+					             	  <h2 class="product-price" style="display: inline;">600</h2>
 					             	  <input  type="hidden" id="acbasictotal" value="0" readonly>
 						            </div>
 
@@ -69,12 +69,12 @@
 
 			     	      <form onsubmit="event.preventDefault();onFormSubmit1();" autocomplete="off">
 			     	        <div class="product">
-					              <img src="plumbingbasicservice.jpg">
+					              <img src="electricalbasicservice.jpg">
 				            	<div class="product-info">
-						            <input class="product-name" name="acmaster" id="acmaster" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" value="Sink Repair" readonly>
+						            <input class="product-name" name="acmaster" id="acmaster" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" size="50px" value="Power Distribution Board (PDB) Meter Servicing" readonly>
 					             	<div class="productprice">
 						              <h2 class="product-price" style="display: inline;">৳</h2>
-					             	  <h2 class="product-price" style="display: inline;">400</h2>
+					             	  <h2 class="product-price" style="display: inline;">700</h2>
 					             	  <input  type="hidden" id="acmastertotal" value="0" readonly>
 						            </div>
 						            <p class="product-quantity">Qnt: <input value="0" name="qnt1" id="qnt1" onkeyup="mult1(this.value);">
@@ -87,12 +87,12 @@
 
 			     	      <form onsubmit="event.preventDefault();onFormSubmit2();" autocomplete="off">
 			     	        <div class="product">
-					              <img src="plumbingbasicservice.jpg">
+					              <img src="electricalbasicservice.jpg">
 				            	<div class="product-info">
-						            <input class="product-name" name="acwater" id="acwater" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" value="Water Tap Servicing" readonly>
+						            <input class="product-name" name="acwater" id="acwater" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" size="40px" value="Main Distribution Board Servicing" readonly>
 					             	<div class="productprice">
 						              <h2 class="product-price" style="display: inline;">৳</h2>
-					             	  <h2 class="product-price" style="display: inline;">300</h2>
+					             	  <h2 class="product-price" style="display: inline;">800</h2>
 					             	  <input  type="hidden" id="acwatertotal" value="0" readonly>
 						            </div>
 						            <p class="product-quantity">Qnt: <input value="0" name="qnt2" id="qnt2" onkeyup="mult2(this.value);">
@@ -105,9 +105,9 @@
 
 			     	      <form onsubmit="event.preventDefault();onFormSubmit3();" autocomplete="off">
 			     	        <div class="product">
-					              <img src="plumbingbasicservice.jpg">
+					              <img src="electricalbasicservice.jpg">
 				            	<div class="product-info">
-						            <input class="product-name" name="acjet" id="acjet" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" value="Plumbing Check Up" readonly>
+						            <input class="product-name" name="acjet" id="acjet" style="font-family: 'Della Respira', serif; font-weight: bolder; font-size: 19px; border: none;" size="40px" value="Electrical Check Up (1 room)" readonly>
 					             	<div class="productprice">
 						              <h2 class="product-price" style="display: inline;">৳</h2>
 					             	  <h2 class="product-price" style="display: inline;">200</h2>
@@ -280,7 +280,7 @@
 
 
 
-	<script src="plumbing_booknow_js.js"></script>
+	<script src="electrical_booknow_js.js"></script>
 
 <!---------------------------------TrxID stored in firebase coding start---------------------------------->
 
